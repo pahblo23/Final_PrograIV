@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using BLL.MANTENIMIENTOS;
+using DAL.MANTENIMIENTOS;
+
+namespace PL
+{
+    public partial class Productos : System.Web.UI.Page
+    {
+
+        #region VARIABLES GLOBALES 
+        cls_Torres_DAL Obj_Torres_DAL = new cls_Torres_DAL();
+        cls_Torres_BLL Obj_Torres_BLL = new cls_Torres_BLL();
+        #endregion
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
+        protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
+        {
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+
+            if(txtaFiltProd.Text==string.Empty)
+            {
+                Obj_Torres_DAL.iId_Torre = 0;
+            }
+            else
+            {
+                Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txtaFiltProd.Text.Trim());
+
+            }
+
+            Obj_Torres_BLL.List_Filt_Torre(ref Obj_Torres_DAL);
+
+            dgv_Torres.DataSource = null;
+            dgv_Torres.DataSource = Obj_Torres_DAL.dtDatos;
+            dgv_Torres.DataBind();
+        }
+
+        protected void btn_Guardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorre.Text.Trim());
+
+            Obj_Torres_BLL.Borrar_Torre(ref Obj_Torres_DAL);
+
+            txt_IdTorre.Text = string.Empty;
+            CargarDatos();
+        }
+
+        protected void btn_Insertar_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

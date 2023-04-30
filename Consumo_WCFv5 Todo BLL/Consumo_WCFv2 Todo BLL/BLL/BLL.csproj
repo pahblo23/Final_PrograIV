@@ -49,10 +49,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="MANTENIMIENTOS\cls_Usuarios_BLL.cs" />
+    <Compile Include="MANTENIMIENTOS\cls_Empleados_BLL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Torres_BLL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Teclados_BLL.cs" />
-    <Compile Include="MANTENIMIENTOS\cls_Rol_BLL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Ratones_BLL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Otros_BLL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Monitores_BLL.cs" />
@@ -60,8 +59,6 @@
     <Compile Include="MANTENIMIENTOS\cls_Estados_BLL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Equipos_BLL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_discos_BLL.cs" />
-    <Compile Include="MANTENIMIENTOS\cls_Actividad_BLL.cs" />
-    <Compile Include="MANTENIMIENTOS\cls_Sexo_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

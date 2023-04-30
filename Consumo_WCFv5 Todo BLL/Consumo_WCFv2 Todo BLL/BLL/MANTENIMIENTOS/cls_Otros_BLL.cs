@@ -18,9 +18,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Otros_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Otros_DAL.dtParametros);
 
             Obj_Otros_DAL.dtParametros.Rows.Add("@id_Otro", "1", Obj_Otros_DAL.iId_Otro);
-            Obj_Otros_DAL.dtParametros.Rows.Add("@tipo_Otro", "7", Obj_Otros_DAL.tTipo_Otro);
-            Obj_Otros_DAL.dtParametros.Rows.Add("@marca_Otro", "7", Obj_Otros_DAL.mMarca_Otro);
-            Obj_Otros_DAL.dtParametros.Rows.Add("@modelo_Otro", "7", Obj_Otros_DAL.mModelo_Otro);
+            Obj_Otros_DAL.dtParametros.Rows.Add("@tipo_Otro", "7", Obj_Otros_DAL.sTipo_Otro);
+            Obj_Otros_DAL.dtParametros.Rows.Add("@marca_Otro", "7", Obj_Otros_DAL.sMarca_Otro);
+            Obj_Otros_DAL.dtParametros.Rows.Add("@modelo_Otro", "7", Obj_Otros_DAL.sModelo_Otro);
 
             Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_OTRO"],
                 "NORMAL", Obj_Otros_DAL.dtParametros);
@@ -65,9 +65,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Otros_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Otros_DAL.dtParametros);
 
             Obj_Otros_DAL.dtParametros.Rows.Add("@id_Otro", "1", Obj_Otros_DAL.iId_Otro);
-            Obj_Otros_DAL.dtParametros.Rows.Add("@tipo_Otro", "7", Obj_Otros_DAL.tTipo_Otro);
-            Obj_Otros_DAL.dtParametros.Rows.Add("@marca_Otro", "7", Obj_Otros_DAL.mMarca_Otro);
-            Obj_Otros_DAL.dtParametros.Rows.Add("@modelo_Otro", "7", Obj_Otros_DAL.mModelo_Otro);
+            Obj_Otros_DAL.dtParametros.Rows.Add("@tipo_Otro", "7", Obj_Otros_DAL.sTipo_Otro);
+            Obj_Otros_DAL.dtParametros.Rows.Add("@marca_Otro", "7", Obj_Otros_DAL.sMarca_Otro);
+            Obj_Otros_DAL.dtParametros.Rows.Add("@modelo_Otro", "7", Obj_Otros_DAL.sModelo_Otro);
 
 
             Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_OTRO"],

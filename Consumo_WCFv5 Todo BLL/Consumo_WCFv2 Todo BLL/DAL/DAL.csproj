@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MANTENIMIENTOS\cls_Actividad_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Distribucion_DAL.cs" />
+    <Compile Include="MANTENIMIENTOS\cls_Empleados_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Equipos_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_discos_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Estados_DAL.cs" />
@@ -50,11 +50,8 @@
     <Compile Include="MANTENIMIENTOS\cls_Monitores_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Otros_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Ratones_DAL.cs" />
-    <Compile Include="MANTENIMIENTOS\cls_Rol_DAL.cs" />
-    <Compile Include="MANTENIMIENTOS\cls_Sexo_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Teclados_DAL.cs" />
     <Compile Include="MANTENIMIENTOS\cls_Torres_DAL.cs" />
-    <Compile Include="MANTENIMIENTOS\cls_Usuarios_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

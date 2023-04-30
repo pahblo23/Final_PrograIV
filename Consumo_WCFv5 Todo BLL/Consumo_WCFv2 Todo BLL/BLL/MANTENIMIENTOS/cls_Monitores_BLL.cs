@@ -18,9 +18,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Monitores_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Monitores_DAL.dtParametros);
 
             Obj_Monitores_DAL.dtParametros.Rows.Add("@id_Monitor", "1", Obj_Monitores_DAL.iId_Monitor);
-            Obj_Monitores_DAL.dtParametros.Rows.Add("@tipo_Monitor", "7", Obj_Monitores_DAL.tTipo_Monitor);
-            Obj_Monitores_DAL.dtParametros.Rows.Add("@marca_Monitor", "7", Obj_Monitores_DAL.mMarca_Monitor);
-            Obj_Monitores_DAL.dtParametros.Rows.Add("@modelo_Monitor", "7", Obj_Monitores_DAL.mModelo_Monitor);
+            Obj_Monitores_DAL.dtParametros.Rows.Add("@tipo_Monitor", "7", Obj_Monitores_DAL.sTipo_Monitor);
+            Obj_Monitores_DAL.dtParametros.Rows.Add("@marca_Monitor", "7", Obj_Monitores_DAL.sMarca_Monitor);
+            Obj_Monitores_DAL.dtParametros.Rows.Add("@modelo_Monitor", "7", Obj_Monitores_DAL.sModelo_Monitor);
 
             Obj_Monitores_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_MONITOR"],
                 "NORMAL", Obj_Monitores_DAL.dtParametros);
@@ -65,9 +65,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Monitores_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Monitores_DAL.dtParametros);
 
             Obj_Monitores_DAL.dtParametros.Rows.Add("@id_Monitor", "1", Obj_Monitores_DAL.iId_Monitor);
-            Obj_Monitores_DAL.dtParametros.Rows.Add("@tipo_Monitor", "7", Obj_Monitores_DAL.tTipo_Monitor);
-            Obj_Monitores_DAL.dtParametros.Rows.Add("@marca_Monitor", "7", Obj_Monitores_DAL.mMarca_Monitor);
-            Obj_Monitores_DAL.dtParametros.Rows.Add("@modelo_Monitor", "7", Obj_Monitores_DAL.mModelo_Monitor);
+            Obj_Monitores_DAL.dtParametros.Rows.Add("@tipo_Monitor", "7", Obj_Monitores_DAL.sTipo_Monitor);
+            Obj_Monitores_DAL.dtParametros.Rows.Add("@marca_Monitor", "7", Obj_Monitores_DAL.sMarca_Monitor);
+            Obj_Monitores_DAL.dtParametros.Rows.Add("@modelo_Monitor", "7", Obj_Monitores_DAL.sModelo_Monitor);
 
 
             Obj_Monitores_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_MONITOR"],

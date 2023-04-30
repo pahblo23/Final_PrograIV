@@ -18,7 +18,7 @@ namespace BLL.MANTENIMIENTOS
             Obj_Memorias_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Memorias_DAL.dtParametros);
 
             Obj_Memorias_DAL.dtParametros.Rows.Add("@id_Memoria", "1", Obj_Memorias_DAL.iId_Memoria);
-            Obj_Memorias_DAL.dtParametros.Rows.Add("@tipo_Memoria", "7", Obj_Memorias_DAL.tTipo_Memoria);
+            Obj_Memorias_DAL.dtParametros.Rows.Add("@tipo_Memoria", "7", Obj_Memorias_DAL.sTipo_Memoria);
            
 
             Obj_Memorias_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_MEMORIA"],
@@ -64,7 +64,7 @@ namespace BLL.MANTENIMIENTOS
             Obj_Memorias_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Memorias_DAL.dtParametros);
 
             Obj_Memorias_DAL.dtParametros.Rows.Add("@id_Memoria", "1", Obj_Memorias_DAL.iId_Memoria);
-            Obj_Memorias_DAL.dtParametros.Rows.Add("@tipo_Memoria", "7", Obj_Memorias_DAL.tTipo_Memoria);
+            Obj_Memorias_DAL.dtParametros.Rows.Add("@tipo_Memoria", "7", Obj_Memorias_DAL.sTipo_Memoria);
 
 
             Obj_Memorias_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_MEMORIA"],

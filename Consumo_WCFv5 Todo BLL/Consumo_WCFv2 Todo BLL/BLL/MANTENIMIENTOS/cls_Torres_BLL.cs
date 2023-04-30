@@ -18,8 +18,8 @@ namespace BLL.MANTENIMIENTOS
             Obj_Torres_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Torres_DAL.dtParametros);
 
             Obj_Torres_DAL.dtParametros.Rows.Add("@id_Torre", "1", Obj_Torres_DAL.iId_Torre);
-            Obj_Torres_DAL.dtParametros.Rows.Add("@marca", "7", Obj_Torres_DAL.mMarca_Torre);
-            Obj_Torres_DAL.dtParametros.Rows.Add("@modelo", "7", Obj_Torres_DAL.mModelo_Torre);
+            Obj_Torres_DAL.dtParametros.Rows.Add("@marca", "7", Obj_Torres_DAL.sMarca_Torre);
+            Obj_Torres_DAL.dtParametros.Rows.Add("@modelo", "7", Obj_Torres_DAL.sModelo_Torre);
             Obj_Torres_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_Torres_DAL.iId_Disco);
             Obj_Torres_DAL.dtParametros.Rows.Add("@id_Memoria", "1", Obj_Torres_DAL.iId_Memoria);
             
@@ -67,8 +67,8 @@ namespace BLL.MANTENIMIENTOS
             Obj_Torres_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Torres_DAL.dtParametros);
 
             Obj_Torres_DAL.dtParametros.Rows.Add("@id_torre", "1", Obj_Torres_DAL.iId_Torre);
-            Obj_Torres_DAL.dtParametros.Rows.Add("@marca", "7", Obj_Torres_DAL.mMarca_Torre);
-            Obj_Torres_DAL.dtParametros.Rows.Add("@modelo", "7", Obj_Torres_DAL.mModelo_Torre);
+            Obj_Torres_DAL.dtParametros.Rows.Add("@marca", "7", Obj_Torres_DAL.sMarca_Torre);
+            Obj_Torres_DAL.dtParametros.Rows.Add("@modelo", "7", Obj_Torres_DAL.sModelo_Torre);
             Obj_Torres_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_Torres_DAL.iId_Disco);
             Obj_Torres_DAL.dtParametros.Rows.Add("@id_Memoria", "1", Obj_Torres_DAL.iId_Memoria);
 

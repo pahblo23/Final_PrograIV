@@ -18,9 +18,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Teclados_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Teclados_DAL.dtParametros);
 
             Obj_Teclados_DAL.dtParametros.Rows.Add("@teclado", "1", Obj_Teclados_DAL.iId_Teclado);
-            Obj_Teclados_DAL.dtParametros.Rows.Add("@tipo_Teclado", "7", Obj_Teclados_DAL.tTipo_Teclado);
-            Obj_Teclados_DAL.dtParametros.Rows.Add("@marca_Teclado", "7", Obj_Teclados_DAL.mMarca_Teclado);
-            Obj_Teclados_DAL.dtParametros.Rows.Add("@modelo_Teclado", "7", Obj_Teclados_DAL.mModelo_Teclado);
+            Obj_Teclados_DAL.dtParametros.Rows.Add("@tipo_Teclado", "7", Obj_Teclados_DAL.sTipo_Teclado);
+            Obj_Teclados_DAL.dtParametros.Rows.Add("@marca_Teclado", "7", Obj_Teclados_DAL.sMarca_Teclado);
+            Obj_Teclados_DAL.dtParametros.Rows.Add("@modelo_Teclado", "7", Obj_Teclados_DAL.sModelo_Teclado);
           
             Obj_Teclados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_TECLADO"],
                 "NORMAL", Obj_Teclados_DAL.dtParametros);
@@ -65,9 +65,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Teclados_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Teclados_DAL.dtParametros);
 
             Obj_Teclados_DAL.dtParametros.Rows.Add("@teclado", "1", Obj_Teclados_DAL.iId_Teclado);
-            Obj_Teclados_DAL.dtParametros.Rows.Add("@tipo_Teclado", "7", Obj_Teclados_DAL.tTipo_Teclado);
-            Obj_Teclados_DAL.dtParametros.Rows.Add("@marca_Teclado", "7", Obj_Teclados_DAL.mMarca_Teclado);
-            Obj_Teclados_DAL.dtParametros.Rows.Add("@modelo_Teclado", "7", Obj_Teclados_DAL.mModelo_Teclado);
+            Obj_Teclados_DAL.dtParametros.Rows.Add("@tipo_Teclado", "7", Obj_Teclados_DAL.sTipo_Teclado);
+            Obj_Teclados_DAL.dtParametros.Rows.Add("@marca_Teclado", "7", Obj_Teclados_DAL.sMarca_Teclado);
+            Obj_Teclados_DAL.dtParametros.Rows.Add("@modelo_Teclado", "7", Obj_Teclados_DAL.sModelo_Teclado);
 
             Obj_Teclados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_TECLADO"],
                 "NORMAL", Obj_Teclados_DAL.dtParametros);

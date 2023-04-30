@@ -1,32 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+
 
 namespace DAL.MANTENIMIENTOS
 {
-    public class cls_Estados_DAL
+    public class cls_Empleados_DAL
     {
         #region VARIABLES PRIVADAS
 
-        private int _iId_Estado, _iId_Equipo;
-        private string _sTipo_Estado, _sMsjError;
+        private int _iID_Empelado;
+        private string _sNombre, _sTelefono, _sEmail, _sMsjError;
         private DataTable _dtDatos, _dtParametros;
 
         #endregion
 
         #region VARIABLES PUBLICAS 
 
-        public int iId_Estado { get => _iId_Estado; set => _iId_Estado = value; }
-        public int iId_Equipo { get => _iId_Equipo; set => _iId_Equipo = value; }
-        public string tTipo_Estado { get => _sTipo_Estado; set => _sTipo_Estado = value; }
+        public int iID_Empelado { get => _iID_Empelado; set => _iID_Empelado = value; }
+        public string sNombre { get => _sNombre; set => _sNombre = value; }
+        public string sTelefono { get => _sTelefono; set => _sTelefono = value; }
+        public string sEmail { get => _sEmail; set => _sEmail = value; }
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
         public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
         public DataTable dtParametros { get => _dtParametros; set => _dtParametros = value; }
 
         #endregion
-
     }
 }

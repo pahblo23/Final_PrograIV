@@ -18,9 +18,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Ratones_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Ratones_DAL.dtParametros);
 
             Obj_Ratones_DAL.dtParametros.Rows.Add("@id_Raton", "1", Obj_Ratones_DAL.iId_Raton);
-            Obj_Ratones_DAL.dtParametros.Rows.Add("@tipo_Raton", "7", Obj_Ratones_DAL.tTipo_Raton);
-            Obj_Ratones_DAL.dtParametros.Rows.Add("@marca_Raton", "7", Obj_Ratones_DAL.mMarca_Raton);
-            Obj_Ratones_DAL.dtParametros.Rows.Add("@modelo_Raton", "7", Obj_Ratones_DAL.mModelo_Raton);
+            Obj_Ratones_DAL.dtParametros.Rows.Add("@tipo_Raton", "7", Obj_Ratones_DAL.sTipo_Raton);
+            Obj_Ratones_DAL.dtParametros.Rows.Add("@marca_Raton", "7", Obj_Ratones_DAL.sMarca_Raton);
+            Obj_Ratones_DAL.dtParametros.Rows.Add("@modelo_Raton", "7", Obj_Ratones_DAL.sModelo_Raton);
 
             Obj_Ratones_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_RATON"],
                 "NORMAL", Obj_Ratones_DAL.dtParametros);
@@ -65,9 +65,9 @@ namespace BLL.MANTENIMIENTOS
             Obj_Ratones_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Ratones_DAL.dtParametros);
 
             Obj_Ratones_DAL.dtParametros.Rows.Add("@id_Raton", "1", Obj_Ratones_DAL.iId_Raton);
-            Obj_Ratones_DAL.dtParametros.Rows.Add("@tipo_Raton", "7", Obj_Ratones_DAL.tTipo_Raton);
-            Obj_Ratones_DAL.dtParametros.Rows.Add("@marca_Raton", "7", Obj_Ratones_DAL.mMarca_Raton);
-            Obj_Ratones_DAL.dtParametros.Rows.Add("@modelo_Raton", "7", Obj_Ratones_DAL.mModelo_Raton);
+            Obj_Ratones_DAL.dtParametros.Rows.Add("@tipo_Raton", "7", Obj_Ratones_DAL.sTipo_Raton);
+            Obj_Ratones_DAL.dtParametros.Rows.Add("@marca_Raton", "7", Obj_Ratones_DAL.sMarca_Raton);
+            Obj_Ratones_DAL.dtParametros.Rows.Add("@modelo_Raton", "7", Obj_Ratones_DAL.sModelo_Raton);
 
 
             Obj_Ratones_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_RATON"],

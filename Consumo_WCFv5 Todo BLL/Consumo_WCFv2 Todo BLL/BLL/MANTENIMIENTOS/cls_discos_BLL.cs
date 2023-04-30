@@ -18,7 +18,7 @@ namespace BLL.MANTENIMIENTOS
             Obj_discos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_discos_DAL.dtParametros);
 
             Obj_discos_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_discos_DAL.iId_Disco);
-            Obj_discos_DAL.dtParametros.Rows.Add("@tipo_Disco", "7", Obj_discos_DAL.tTipo_Disco);
+            Obj_discos_DAL.dtParametros.Rows.Add("@tipo_Disco", "7", Obj_discos_DAL.sTipo_Disco);
            
 
             Obj_discos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_DISCO"],
@@ -62,7 +62,7 @@ namespace BLL.MANTENIMIENTOS
             WCF.BDClient Obj_WCF = new BDClient();
             Obj_discos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_discos_DAL.dtParametros);
             Obj_discos_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_discos_DAL.iId_Disco);
-            Obj_discos_DAL.dtParametros.Rows.Add("@tipo_Disco", "7", Obj_discos_DAL.tTipo_Disco);
+            Obj_discos_DAL.dtParametros.Rows.Add("@tipo_Disco", "7", Obj_discos_DAL.sTipo_Disco);
             Obj_discos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_DISCO"],
                 "NORMAL", Obj_discos_DAL.dtParametros);
         }

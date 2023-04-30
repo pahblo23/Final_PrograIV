@@ -11,11 +11,11 @@ using System.Data;
 
 namespace PL
 {
-    
+
     public partial class _Default : Page
     {
         #region VARIABLES GLOBALES DAL
-        cls_Actividad_DAL Obj_actividad_DAL = new cls_Actividad_DAL();
+
         cls_discos_DAL Obj_discos_DAL = new cls_discos_DAL();
         cls_Equipos_DAL Obj_equipos_DAL = new cls_Equipos_DAL();
         cls_Estados_DAL Obj_estados_DAL = new cls_Estados_DAL();
@@ -23,15 +23,13 @@ namespace PL
         cls_Monitores_DAL Obj_monitores_DAL = new cls_Monitores_DAL();
         cls_Otros_DAL Obj_otros_DAL = new cls_Otros_DAL();
         cls_Ratones_DAL Obj_ratones_DAL = new cls_Ratones_DAL();
-        cls_Rol_DAL Obj_rol_DAL = new cls_Rol_DAL();
-        cls_Sexo_DAL Obj_sexo_DAL = new cls_Sexo_DAL();
         cls_Teclados_DAL Obj_teclados_DAL = new cls_Teclados_DAL();
         cls_Torres_DAL Obj_torres_DAL = new cls_Torres_DAL();
-        cls_Usuarios_DAL Obj_usuarios = new cls_Usuarios_DAL();
+        cls_Empleados_DAL Obj_Empleados_DAL = new cls_Empleados_DAL();
         #endregion
 
         #region VARIABLES GLOBALES BLL
-        cls_Actividad_BLL Obj_actividad_BLL = new cls_Actividad_BLL();
+
         cls_discos_BLL Obj_discos_BLL = new cls_discos_BLL();
         cls_Equipos_BLL Obj_equipos_BLL = new cls_Equipos_BLL();
         cls_Estados_BLL Obj_estados_BLL = new cls_Estados_BLL();
@@ -39,11 +37,9 @@ namespace PL
         cls_Monitores_BLL Obj_monitores_BLL = new cls_Monitores_BLL();
         cls_Otros_BLL Obj_otros_BLL = new cls_Otros_BLL();
         cls_Ratones_BLL Obj_ratones_BLL = new cls_Ratones_BLL();
-        cls_Rol_BLL Obj_rol_BLL = new cls_Rol_BLL();
-        cls_Sexo_BLL Obj_sexo_BLL = new cls_Sexo_BLL();
         cls_Teclados_BLL Obj_teclados_BLL = new cls_Teclados_BLL();
         cls_Torres_BLL Obj_torres_BLL = new cls_Torres_BLL();
-        cls_Usuarios_BLL Obj_usuarios_BLL = new cls_Usuarios_BLL();
+        cls_Empleados_BLL Obj_Empleados_BLL = new cls_Empleados_BLL();
         #endregion
         
         int resul_switch = 0;
@@ -102,7 +98,7 @@ namespace PL
             switch (resul_switch)
             {
                 case 1:
-                    Obj_monitores_DAL.mMarca_Monitor = txt_filtro.Text.Trim();
+                    Obj_monitores_DAL.sMarca_Monitor = txt_filtro.Text.Trim();
 
                     Obj_monitores_BLL.List_Filt_Monitor(ref Obj_monitores_DAL);
 
@@ -111,7 +107,7 @@ namespace PL
                     GV_Tabla.DataBind();
                     break;
                 case 2:
-                    Obj_teclados_DAL.mMarca_Teclado = txt_filtro.Text.Trim();
+                    Obj_teclados_DAL.sMarca_Teclado = txt_filtro.Text.Trim();
 
                     Obj_teclados_BLL.List_Filt_Teclado(ref Obj_teclados_DAL);
 
@@ -121,7 +117,7 @@ namespace PL
                     break;
                 case 3:
                     //se inserta código para jalar la tabla de Memorias
-                    Obj_memorias_DAL.tTipo_Memoria = txt_filtro.Text.Trim();
+                    Obj_memorias_DAL.sTipo_Memoria = txt_filtro.Text.Trim();
 
                     Obj_memorias_BLL.List_Filt_Memoria(ref Obj_memorias_DAL);
 
@@ -131,7 +127,7 @@ namespace PL
                     break;
                 case 4:
                     //se inserta código para jalar la tabla de Mouse
-                    Obj_ratones_DAL.mMarca_Raton = txt_filtro.Text.Trim();
+                    Obj_ratones_DAL.sMarca_Raton = txt_filtro.Text.Trim();
 
                     Obj_ratones_BLL.List_Filt_Ratones(ref Obj_ratones_DAL);
 
@@ -141,7 +137,7 @@ namespace PL
                     break;
                 case 5:
                     //se inserta código para jalar la tabla de Torres
-                    Obj_torres_DAL.mMarca_Torre = txt_filtro.Text.Trim();
+                    Obj_torres_DAL.sMarca_Torre = txt_filtro.Text.Trim();
 
                     Obj_torres_BLL.List_Filt_Torre(ref Obj_torres_DAL);
 
@@ -151,7 +147,7 @@ namespace PL
                     break;
                 case 6:
                     //se inserta código para jalar la tabla de Discos
-                    Obj_discos_DAL.tTipo_Disco = txt_filtro.Text.Trim();
+                    Obj_discos_DAL.sTipo_Disco = txt_filtro.Text.Trim();
 
                     Obj_discos_BLL.List_Filt_Discos(ref Obj_discos_DAL);
 
@@ -161,7 +157,7 @@ namespace PL
                     break;
                 case 7:
                     //se inserta código para jalar la tabla de otros
-                    Obj_otros_DAL.mMarca_Otro = txt_filtro.Text.Trim();
+                    Obj_otros_DAL.sMarca_Otro = txt_filtro.Text.Trim();
 
                     Obj_otros_BLL.List_Filt_Otro(ref Obj_otros_DAL);
 
@@ -177,7 +173,7 @@ namespace PL
             {
                 case 1:
                     //se inserta código para jalar la tabla de Monitores
-                    Obj_monitores_DAL.mMarca_Monitor = "";
+                    Obj_monitores_DAL.sMarca_Monitor = "";
 
                     Obj_monitores_BLL.List_Filt_Monitor(ref Obj_monitores_DAL);
 
@@ -192,7 +188,7 @@ namespace PL
                     break;
                 case 2:
                     //se inserta código para jalar la tabla de Teclados
-                    Obj_teclados_DAL.mMarca_Teclado = "";
+                    Obj_teclados_DAL.sMarca_Teclado = "";
 
                     Obj_teclados_BLL.List_Filt_Teclado(ref Obj_teclados_DAL);
 
@@ -206,7 +202,7 @@ namespace PL
                     break;
                 case 3:
                     //se inserta código para jalar la tabla de Memorias
-                    Obj_memorias_DAL.tTipo_Memoria = "";
+                    Obj_memorias_DAL.sTipo_Memoria = "";
 
                     Obj_memorias_BLL.List_Filt_Memoria(ref Obj_memorias_DAL);
 
@@ -220,7 +216,7 @@ namespace PL
                     break;
                 case 4:
                     //se inserta código para jalar la tabla de Mouse
-                    Obj_ratones_DAL.tTipo_Raton = "";
+                    Obj_ratones_DAL.sTipo_Raton = "";
 
                     Obj_ratones_BLL.List_Filt_Ratones(ref Obj_ratones_DAL);
 
@@ -234,7 +230,7 @@ namespace PL
                     break;
                 case 5:
                     //se inserta código para jalar la tabla de Torres
-                    Obj_torres_DAL.mMarca_Torre = "";
+                    Obj_torres_DAL.sMarca_Torre = "";
 
                     Obj_torres_BLL.List_Filt_Torre(ref Obj_torres_DAL);
 
@@ -248,7 +244,7 @@ namespace PL
                     break;
                 case 6:
                     //se inserta código para jalar la tabla de Discos
-                    Obj_discos_DAL.tTipo_Disco = "";
+                    Obj_discos_DAL.sTipo_Disco = "";
 
                     Obj_discos_BLL.List_Filt_Discos(ref Obj_discos_DAL);
 
@@ -262,7 +258,7 @@ namespace PL
                     break;
                 case 7:
                     //se inserta código para jalar la tabla de Otros
-                    Obj_otros_DAL.mModelo_Otro = "";
+                    Obj_otros_DAL.sModelo_Otro = "";
 
                     Obj_otros_BLL.List_Filt_Otro(ref Obj_otros_DAL);
 
@@ -282,7 +278,7 @@ namespace PL
             {
                 case 1:
                     //se inserta código para jalar la tabla de Monitores
-                    Obj_monitores_DAL.mMarca_Monitor = txt_IdTeclado.Text.Trim();
+                    Obj_monitores_DAL.sMarca_Monitor = txt_IdTeclado.Text.Trim();
 
                     Obj_monitores_BLL.Borrar_Monitor(ref Obj_monitores_DAL);
 
@@ -291,7 +287,7 @@ namespace PL
                     break;
                 case 2:
                     //se inserta código para jalar la tabla de Teclados
-                    Obj_teclados_DAL.mMarca_Teclado = txt_IdTeclado.Text.Trim();
+                    Obj_teclados_DAL.sMarca_Teclado = txt_IdTeclado.Text.Trim();
 
                     Obj_teclados_BLL.Borrar_Teclado(ref Obj_teclados_DAL);
 
@@ -300,7 +296,7 @@ namespace PL
                     break;
                 case 3:
                     //se inserta código para jalar la tabla de Memorias
-                    Obj_memorias_DAL.tTipo_Memoria = txt_IdTeclado.Text.Trim();
+                    Obj_memorias_DAL.sTipo_Memoria = txt_IdTeclado.Text.Trim();
 
                     Obj_memorias_BLL.Borrar_Memoria(ref Obj_memorias_DAL);
 
@@ -309,7 +305,7 @@ namespace PL
                     break;
                 case 4:
                     //se inserta código para jalar la tabla de Mouse
-                    Obj_ratones_DAL.mMarca_Raton = txt_IdTeclado.Text.Trim();
+                    Obj_ratones_DAL.sMarca_Raton = txt_IdTeclado.Text.Trim();
 
                     Obj_ratones_BLL.Borrar_Raton(ref Obj_ratones_DAL);
 
@@ -318,7 +314,7 @@ namespace PL
                     break;
                 case 5:
                     //se inserta código para jalar la tabla de Torres
-                    Obj_torres_DAL.mMarca_Torre = txt_IdTeclado.Text.Trim();
+                    Obj_torres_DAL.sMarca_Torre = txt_IdTeclado.Text.Trim();
 
                     Obj_torres_BLL.Borrar_Torre(ref Obj_torres_DAL);
 
@@ -327,7 +323,7 @@ namespace PL
                     break;
                 case 6:
                     //se inserta código para jalar la tabla de Discos
-                    Obj_discos_DAL.tTipo_Disco = txt_IdTeclado.Text.Trim();
+                    Obj_discos_DAL.sTipo_Disco = txt_IdTeclado.Text.Trim();
 
                     Obj_discos_BLL.Borrar_Discos(ref Obj_discos_DAL);
 
@@ -336,7 +332,7 @@ namespace PL
                     break;
                 case 7:
                     //se inserta código para jalar la tabla de Otros
-                    Obj_otros_DAL.mMarca_Otro = txt_IdTeclado.Text.Trim();
+                    Obj_otros_DAL.sMarca_Otro = txt_IdTeclado.Text.Trim();
 
                     Obj_otros_BLL.Borrar_Otro(ref Obj_otros_DAL);
 
@@ -352,8 +348,8 @@ namespace PL
             {
                 case 1:
                     //se inserta código para jalar la tabla de Monitores
-                    Obj_monitores_DAL.mMarca_Monitor = txt_IdTeclado.Text.Trim();
-                    Obj_monitores_DAL.mModelo_Monitor = txt_IdTeclado.Text.Trim();
+                    Obj_monitores_DAL.sMarca_Monitor = txt_IdTeclado.Text.Trim();
+                    Obj_monitores_DAL.sModelo_Monitor = txt_IdTeclado.Text.Trim();
                     Obj_monitores_DAL.iId_Monitor = Convert.ToInt32(ddl_opciones.SelectedValue.ToString().Trim());
 
                     Obj_monitores_BLL.Insertar_Monitor(ref Obj_monitores_DAL);
@@ -364,8 +360,8 @@ namespace PL
                     break;
                 case 2:
                     //se inserta código para jalar la tabla de Teclados
-                    Obj_teclados_DAL.mMarca_Teclado = txt_IdTeclado.Text.Trim();
-                    Obj_teclados_DAL.mModelo_Teclado = txt_IdTeclado.Text.Trim();
+                    Obj_teclados_DAL.sMarca_Teclado = txt_IdTeclado.Text.Trim();
+                    Obj_teclados_DAL.sModelo_Teclado = txt_IdTeclado.Text.Trim();
                     Obj_teclados_DAL.iId_Teclado = Convert.ToInt32(ddl_opciones.SelectedValue.ToString().Trim());
 
                     Obj_teclados_BLL.Insertar_Teclados(ref Obj_teclados_DAL);
@@ -376,7 +372,7 @@ namespace PL
                     break;
                 case 3:
                     //se inserta código para jalar la tabla de memorias
-                    Obj_memorias_DAL.tTipo_Memoria = txt_IdTeclado.Text.Trim();
+                    Obj_memorias_DAL.sTipo_Memoria = txt_IdTeclado.Text.Trim();
                     Obj_memorias_DAL.iId_Memoria = Convert.ToInt32(ddl_opciones.SelectedValue.ToString().Trim());
 
                     Obj_memorias_BLL.Insertar_Memoria(ref Obj_memorias_DAL);
@@ -387,9 +383,9 @@ namespace PL
                     break;
                 case 4:
                     //se inserta código para jalar la tabla de Mouse
-                    Obj_ratones_DAL.tTipo_Raton = txt_IdTeclado.Text.Trim();
-                    Obj_ratones_DAL.mMarca_Raton = txt_IdTeclado.Text.Trim();
-                    Obj_ratones_DAL.mModelo_Raton = txt_IdTeclado.Text.Trim();
+                    Obj_ratones_DAL.sTipo_Raton = txt_IdTeclado.Text.Trim();
+                    Obj_ratones_DAL.sMarca_Raton = txt_IdTeclado.Text.Trim();
+                    Obj_ratones_DAL.sModelo_Raton = txt_IdTeclado.Text.Trim();
                     Obj_ratones_DAL.iId_Raton = Convert.ToInt32(ddl_opciones.SelectedValue.ToString().Trim());
 
                     Obj_ratones_BLL.Insertar_Raton(ref Obj_ratones_DAL);
@@ -400,8 +396,8 @@ namespace PL
                     break;
                 case 5:
                     //se inserta código para jalar la tabla de torres
-                    Obj_torres_DAL.mMarca_Torre = txt_IdTeclado.Text.Trim();
-                    Obj_torres_DAL.mModelo_Torre = txt_ModeloTeclado.Text.Trim();
+                    Obj_torres_DAL.sMarca_Torre = txt_IdTeclado.Text.Trim();
+                    Obj_torres_DAL.sModelo_Torre = txt_ModeloTeclado.Text.Trim();
                     Obj_torres_DAL.iId_Torre = Convert.ToInt32(ddl_opciones.SelectedValue.ToString().Trim());
 
                     Obj_torres_BLL.Insertar_Torre(ref Obj_torres_DAL);
@@ -412,7 +408,7 @@ namespace PL
                     break;
                 case 6:
                     //se inserta código para jalar la tabla de discos
-                    Obj_discos_DAL.tTipo_Disco = txt_IdTeclado.Text.Trim();
+                    Obj_discos_DAL.sTipo_Disco = txt_IdTeclado.Text.Trim();
                     Obj_discos_DAL.iId_Disco = Convert.ToInt32(ddl_opciones.SelectedValue.ToString().Trim());
 
                     Obj_discos_BLL.Insertar_Discos(ref Obj_discos_DAL);
@@ -423,8 +419,8 @@ namespace PL
                     break;
                 case 7:
                     //se inserta código para jalar la tabla de Otros
-                    Obj_otros_DAL.mMarca_Otro = txt_IdTeclado.Text.Trim();
-                    Obj_otros_DAL.mModelo_Otro = txt_IdTeclado.Text.Trim();
+                    Obj_otros_DAL.sMarca_Otro = txt_IdTeclado.Text.Trim();
+                    Obj_otros_DAL.sModelo_Otro = txt_IdTeclado.Text.Trim();
                     Obj_otros_DAL.iId_Otro = Convert.ToInt32(ddl_opciones.SelectedValue.ToString().Trim());
 
                     Obj_otros_BLL.Insertar_Otro(ref Obj_otros_DAL);

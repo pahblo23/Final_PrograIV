@@ -54,7 +54,7 @@ namespace PL
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
-            Obj_Memoria_DAL.tTipo_Memoria = txt_TipoMemoria.Text.Trim();
+            Obj_Memoria_DAL.sTipo_Memoria = txt_TipoMemoria.Text.Trim();
 
             Obj_Memoria_BLL.Actualizar_Memoria(ref Obj_Memoria_DAL);
 
@@ -73,7 +73,7 @@ namespace PL
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
-            Obj_Memoria_DAL.tTipo_Memoria = txt_TipoMemoria.Text.Trim();
+            Obj_Memoria_DAL.sTipo_Memoria = txt_TipoMemoria.Text.Trim();
 
             Obj_Memoria_BLL.Insertar_Memoria(ref Obj_Memoria_DAL);
 

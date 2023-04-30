@@ -59,9 +59,9 @@ namespace PL
         {
 
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
-            Obj_Monitor_DAL.mMarca_Monitor = txt_MarcaMonitor.Text.Trim();
-            Obj_Monitor_DAL.mModelo_Monitor = txt_ModeloMonitor.Text.Trim();
-            Obj_Monitor_DAL.tTipo_Monitor = txt_TipoMonitor.Text.Trim();
+            Obj_Monitor_DAL.sMarca_Monitor = txt_MarcaMonitor.Text.Trim();
+            Obj_Monitor_DAL.sModelo_Monitor = txt_ModeloMonitor.Text.Trim();
+            Obj_Monitor_DAL.sTipo_Monitor = txt_TipoMonitor.Text.Trim();
 
             Obj_Monitor_BLL.Insertar_Monitor(ref Obj_Monitor_DAL);
 
@@ -76,9 +76,9 @@ namespace PL
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
-            Obj_Monitor_DAL.mMarca_Monitor = txt_MarcaMonitor.Text.Trim();
-            Obj_Monitor_DAL.mModelo_Monitor = txt_ModeloMonitor.Text.Trim();
-            Obj_Monitor_DAL.tTipo_Monitor = txt_TipoMonitor.Text.Trim();
+            Obj_Monitor_DAL.sMarca_Monitor = txt_MarcaMonitor.Text.Trim();
+            Obj_Monitor_DAL.sModelo_Monitor = txt_ModeloMonitor.Text.Trim();
+            Obj_Monitor_DAL.sTipo_Monitor = txt_TipoMonitor.Text.Trim();
 
             Obj_Monitor_BLL.Actualizar_Monitor(ref Obj_Monitor_DAL);
 

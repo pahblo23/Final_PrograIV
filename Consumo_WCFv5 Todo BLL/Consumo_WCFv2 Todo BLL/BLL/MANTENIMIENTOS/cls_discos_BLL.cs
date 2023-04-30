@@ -31,7 +31,7 @@ namespace BLL.MANTENIMIENTOS
 
             Obj_discos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_discos_DAL.dtParametros);
 
-            Obj_discos_DAL.dtParametros.Rows.Add("@id_dISCO", "1", Obj_discos_DAL.iId_Disco);
+            Obj_discos_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_discos_DAL.iId_Disco);
 
             Obj_discos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["BORRAR_DISCO"],
                 "NORMAL", Obj_discos_DAL.dtParametros);

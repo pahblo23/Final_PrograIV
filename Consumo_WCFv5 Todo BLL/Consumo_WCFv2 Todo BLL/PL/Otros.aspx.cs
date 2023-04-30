@@ -53,9 +53,9 @@ namespace PL
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
             Obj_Otro_DAL.iId_Otro = Convert.ToInt32(txt_IdOtro.Text.Trim());
-            Obj_Otro_DAL.mMarca_Otro = txt_MarcaOtro.Text.Trim();
-            Obj_Otro_DAL.mModelo_Otro = txt_ModeloOtro.Text.Trim();
-            Obj_Otro_DAL.tTipo_Otro = txt_TipoOtro.Text.Trim();
+            Obj_Otro_DAL.sMarca_Otro = txt_MarcaOtro.Text.Trim();
+            Obj_Otro_DAL.sModelo_Otro = txt_ModeloOtro.Text.Trim();
+            Obj_Otro_DAL.sTipo_Otro = txt_TipoOtro.Text.Trim();
 
             Obj_Otro_BLL.Insertar_Otro(ref Obj_Otro_DAL);
 
@@ -76,9 +76,9 @@ namespace PL
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
             Obj_Otro_DAL.iId_Otro = Convert.ToInt32(txt_IdOtro.Text.Trim());
-            Obj_Otro_DAL.mMarca_Otro = txt_MarcaOtro.Text.Trim();
-            Obj_Otro_DAL.mModelo_Otro = txt_ModeloOtro.Text.Trim();
-            Obj_Otro_DAL.tTipo_Otro = txt_TipoOtro.Text.Trim();
+            Obj_Otro_DAL.sMarca_Otro = txt_MarcaOtro.Text.Trim();
+            Obj_Otro_DAL.sModelo_Otro = txt_ModeloOtro.Text.Trim();
+            Obj_Otro_DAL.sTipo_Otro = txt_TipoOtro.Text.Trim();
 
             Obj_Otro_BLL.Actualizar_Otro(ref Obj_Otro_DAL);
 

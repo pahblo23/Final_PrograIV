@@ -58,7 +58,7 @@ namespace PL
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
-            Obj_Disco_DAL.tTipo_Disco = txt_TipoDisco.Text.Trim();
+            Obj_Disco_DAL.sTipo_Disco = txt_TipoDisco.Text.Trim();
 
             Obj_Disco_BLL.Actualizar_Discos(ref Obj_Disco_DAL);
 
@@ -71,7 +71,7 @@ namespace PL
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
-            Obj_Disco_DAL.tTipo_Disco = txt_TipoDisco.Text.Trim();
+            Obj_Disco_DAL.sTipo_Disco = txt_TipoDisco.Text.Trim();
 
             Obj_Disco_BLL.Insertar_Discos(ref Obj_Disco_DAL);
 

@@ -150,12 +150,12 @@ namespace PL
         protected global::System.Web.UI.WebControls.ImageButton btnInsertar;
 
         /// <summary>
-        /// dgv_Teclados control.
+        /// dgv_Torres control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgv_Teclados;
+        protected global::System.Web.UI.WebControls.GridView dgv_Torres;
     }
 }

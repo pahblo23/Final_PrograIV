@@ -90,7 +90,7 @@
         
             </div>
             <div>
-                <asp:GridView ID="dgv_Teclados" runat="server" Width="900px"></asp:GridView>
+                <asp:GridView ID="dgv_Torres" runat="server" Width="900px" DataSourceID="grid_Torres"></asp:GridView>
             </div>
 
         </form>

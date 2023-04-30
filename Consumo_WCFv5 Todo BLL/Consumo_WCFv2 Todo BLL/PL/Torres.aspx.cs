@@ -33,7 +33,7 @@ namespace PL
                 Obj_Teclados_DAL.iId_Torre = Convert.ToInt32(txtaFiltProd.Text.Trim());
             }
             Obj_Teclados_BLL.List_Filt_Torre(ref Obj_Teclados_DAL);
-
+            
             dgv_Torres.DataSource = null;
             dgv_Teclados.DataSource = Obj_Teclados_DAL.dtDatos;
             dgv_Teclados.DataBind();

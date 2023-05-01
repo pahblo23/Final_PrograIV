@@ -20,18 +20,7 @@ GO
 
 USE [CompuStore]
 GO
-/****** Object:  Table [dbo].[Distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 
-CREATE TABLE [dbo].[Distribucion](
-	[id_Distribucion] [int] NOT NULL,
-	[id_Equipo] [int] NULL,
-	[id_usuario] [int] NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[id_Distribucion] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[discos]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
@@ -67,6 +56,7 @@ CREATE TABLE [dbo].[equipos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
 /****** Object:  Table [dbo].[estados]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
@@ -158,21 +148,7 @@ CREATE TABLE [dbo].[roles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[sexo]    Script Date: 29/04/2023 08:40:29 a. m. ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 
---CREATE TABLE [dbo].[sexo](
---	[id_Sexo] [char](1) NOT NULL,
---	[genero] [nvarchar](30) NULL,
--- CONSTRAINT [PK_id_Sexo_sexo] PRIMARY KEY NONCLUSTERED 
---(
---	[id_Sexo] ASC
---)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
---) ON [PRIMARY]
---GO
 /****** Object:  Table [dbo].[teclados]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
@@ -206,20 +182,33 @@ CREATE TABLE [dbo].[torres](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[usuario]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  Table [dbo].[empleado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[usuario](
-	[id_usuario] [int]  NOT NULL,
+CREATE TABLE [dbo].[empleado](
+	[id_empleado] [int]  NOT NULL,
 	[nombre] [nvarchar](20) NULL,
 	[telefono] [nvarchar](20) NULL,
 	[rol_id] [int] NULL,
 	[email] [nvarchar](50) NULL
- CONSTRAINT [PK_usuario_id_usuario] PRIMARY KEY NONCLUSTERED 
+ CONSTRAINT [PK_empleado_id_empleado] PRIMARY KEY NONCLUSTERED 
 (
-	[id_usuario] ASC
+	[id_empleado] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+
+CREATE TABLE [dbo].[distribucion](
+	[id_distribucion] [int] NOT NULL,
+	[id_Equipo] [int] NULL,
+	[id_empleado] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id_distribucion] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -231,18 +220,15 @@ GO
 
 
 
-
-
-
-ALTER TABLE [dbo].[Distribucion]  WITH CHECK ADD  CONSTRAINT [FK_equipos_id_Equipo] FOREIGN KEY([id_Equipo])
+ALTER TABLE [dbo].[distribucion]  WITH CHECK ADD  CONSTRAINT [FK_equipos_id_Equipo] FOREIGN KEY([id_Equipo])
 REFERENCES [dbo].[equipos] ([id_Equipo])
 GO
-ALTER TABLE [dbo].[Distribucion] CHECK CONSTRAINT [FK_equipos_id_Equipo]
+ALTER TABLE [dbo].[distribucion] CHECK CONSTRAINT [FK_equipos_id_Equipo]
 GO
-ALTER TABLE [dbo].[Distribucion]  WITH CHECK ADD  CONSTRAINT [FK_usuarios_id_usuario] FOREIGN KEY([id_usuario])
-REFERENCES [dbo].[usuario] ([id_usuario])
+ALTER TABLE [dbo].[distribucion]  WITH CHECK ADD  CONSTRAINT [FK_empleados_id_empleado] FOREIGN KEY([id_empleado])
+REFERENCES [dbo].[empleado] ([id_empleado])
 GO
-ALTER TABLE [dbo].[Distribucion] CHECK CONSTRAINT [FK_usuarios_id_usuario]
+ALTER TABLE [dbo].[distribucion] CHECK CONSTRAINT [FK_empleados_id_empleado]
 GO
 ALTER TABLE [dbo].[equipos]  WITH CHECK ADD  CONSTRAINT [FK_discos_id_Disco] FOREIGN KEY([disco_Id])
 REFERENCES [dbo].[discos] ([id_Disco])
@@ -288,10 +274,10 @@ GO
 
 
 
-ALTER TABLE [dbo].[usuario]  WITH CHECK ADD  CONSTRAINT [FK_roles_rol_id] FOREIGN KEY([rol_id])
+ALTER TABLE [dbo].[empleado]  WITH CHECK ADD  CONSTRAINT [FK_roles_rol_id] FOREIGN KEY([rol_id])
 REFERENCES [dbo].[roles] ([id_Rol])
 GO
-ALTER TABLE [dbo].[usuario] CHECK CONSTRAINT [FK_roles_rol_id]
+ALTER TABLE [dbo].[empleado] CHECK CONSTRAINT [FK_roles_rol_id]
 GO
 
 
@@ -317,22 +303,22 @@ GO
 
 
 
-/****** Object:  StoredProcedure [dbo].[SP_Actualizar_Distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Actualizar_distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Actualizar_Distribucion]
-@id_Distribucion int,
+create procedure [dbo].[SP_Actualizar_distribucion]
+@id_distribucion int,
 @id_Equipo int,
-@id_usuario int
+@id_empleado int
 as
 
-UPDATE [dbo].[Distribuciond]
-   SET [id_Distribucion] = @id_Distribucion,
+UPDATE [dbo].[distribuciond]
+   SET [id_distribucion] = @id_distribucion,
        [id_Equipo] = @id_Equipo,
-       [id_usuario] = @id_usuario
- WHERE [id_Distribucion] = @id_Distribucion
+       [id_empleado] = @id_empleado
+ WHERE [id_distribucion] = @id_distribucion
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Actualizar_Disco]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
@@ -514,36 +500,36 @@ UPDATE [dbo].[torres]
       ,[id_Memoria] = @id_Memoria 
  WHERE [id_Torre] = @id_Torre
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Actualizar_Usuario]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Actualizar_Empleado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Actualizar_Usuario]
+create procedure [dbo].[SP_Actualizar_Empleado]
 (@nombre nvarchar (20),
 @telefono nvarchar (20),
 @rol_id int,
 @email nvarchar (50)
 )
 as
-UPDATE [dbo].[usuario]
+UPDATE [dbo].[empleado]
    SET [nombre] = @nombre
       ,[telefono] = @telefono
       ,[rol_id] = @rol_id
       ,[email] = @email
  WHERE [nombre] = @nombre
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Borrar_Distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Borrar_distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Borrar_Distribucion]
-@id_Distribucion int
+create procedure [dbo].[SP_Borrar_distribucion]
+@id_distribucion int
 as
 begin
-DELETE FROM [dbo].[Distribucion]
-      WHERE [id_Distribucion] = @id_Distribucion
+DELETE FROM [dbo].[distribucion]
+      WHERE [id_distribucion] = @id_distribucion
 end
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Borrar_Disco]    Script Date: 29/04/2023 08:40:29 a. m. ******/
@@ -677,35 +663,50 @@ DELETE FROM [dbo].[torres]
       WHERE [id_Torre] = @id_Torre
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Borrar_Usuario]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Borrar_Empleado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Borrar_Usuario]
+create procedure [dbo].[SP_Borrar_Empleado]
 @nombre nvarchar (20)
 as
 begin
-DELETE FROM [dbo].[usuario]
+DELETE FROM [dbo].[empleado]
       WHERE [nombre] = @nombre
 	  end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Filtrar_distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE procedure [dbo].[SP_Filtrar_Distribucion]
+CREATE procedure [dbo].[SP_Filtrar_distribucion]
 (
 @filtro int
 )
 as
 begin
-SELECT [id_Distribucion] as [Identificacion Distribucion]
-      ,[id_Equipo] as [Identificacion Equipo]
-      ,[id_usuario] as [Identificacion Usuario]
+SELECT [id_Distribucion] as [ID Distribucion]
+	  ,[id_empleado] as [Empleado]
+      ,dbo.distribucion.id_Equipo as [ID Equipo]
+	  ,dbo.torres.marca as [Marca Torre]
+	  ,dbo.teclados.marca_Teclado as [Marca Teclado]
+	  ,dbo.ratones.marca_Raton as [Marca Mouse]
+	  ,dbo.discos.tipo_Disco as [Tipo Disco]
+	  ,dbo.memorias.tipo_Memoria as [Tipo Memoria]
+	  ,dbo.monitores.marca_Monitor as [Marca Monitor]
+      
   FROM [dbo].[Distribucion]
-  where ltrim(RTRIM([id_Distribucion])) like '%' + ltrim(RTRIM(@filtro)) + '%'
+
+  left join equipos on dbo.distribucion.id_Equipo = dbo.equipos.id_Equipo
+  left join torres on dbo.equipos.torre_Id = dbo.torres.id_Torre
+  left join teclados on dbo.equipos.teclado_Id = dbo.teclados.id_Teclado
+  left join ratones on dbo.equipos.raton_Id = dbo.ratones.id_Raton
+  left join discos on dbo.equipos.disco_Id = dbo.discos.id_Disco
+  left join memorias on dbo.equipos.Memoria_Id = dbo.memorias.id_Memoria
+  left join monitores on dbo.equipos.Monitor_Id = dbo.monitores.id_Monitor
+  where ltrim(RTRIM([id_Distribucion])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Filtrar_Disco]    Script Date: 29/04/2023 08:40:29 a. m. ******/
@@ -900,24 +901,24 @@ SELECT dbo.[torres].id_Torre as [Identificacion Torre]
     where ltrim(RTRIM(dbo.[torres].id_Torre)) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Usuarios]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Empleados]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Filtrar_Usuarios]
+create procedure [dbo].[SP_Filtrar_Empleados]
 (
 @filtro int
 )
 as
 begin
-SELECT [id_usuario] as [Identificacion Usuario]
-      ,[nombre] as [Nombre Usuario]
-      ,[telefono] as [Telefono Usuario]
-      ,[rol_id] as [Rol Usuario]
-      ,[email] as [Email Usuario]
-  FROM [dbo].[usuario]
-    where ltrim(RTRIM([id_usuario])) like '%' + ltrim(RTRIM(@filtro)) + '%'
+SELECT [id_empleado] as [Identificacion Empleado]
+      ,[nombre] as [Nombre Empleado]
+      ,[telefono] as [Telefono Empleado]
+      ,[rol_id] as [Rol Empleado]
+      ,[email] as [Email Empleado]
+  FROM [dbo].[empleado]
+    where ltrim(RTRIM([id_empleado])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Inserta_Rol]    Script Date: 29/04/2023 08:40:29 a. m. ******/
@@ -936,27 +937,27 @@ INSERT INTO [dbo].[roles]
            (@id_Rol,@rol)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Insertar_Distribucion]
+create procedure [dbo].[SP_Insertar_distribucion]
 (
-@id_Distribucion int,
+@id_distribucion int,
 @id_Equipo int,
-@id_usuario int
+@id_empleado int
 )
 as
 begin
-INSERT INTO [dbo].[Distribucion]
-           ([id_Distribucion]
+INSERT INTO [dbo].[distribucion]
+           ([id_distribucion]
            ,[id_Equipo]
-           ,[id_usuario])
+           ,[id_empleado])
      VALUES
-           (@id_Distribucion,
+           (@id_distribucion,
            @id_Equipo,
-           @id_usuario)
+           @id_empleado)
 end
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Insertar_Disco]    Script Date: 29/04/2023 08:40:29 a. m. ******/
@@ -1162,12 +1163,12 @@ INSERT INTO [dbo].[torres]
            (@id_Torre,@marca,@modelo,@id_Disco,@id_Memoria)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Usuario]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Empleado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Insertar_Usuario]
+create procedure [dbo].[SP_Insertar_Empleado]
 (
 @nombre nvarchar (20),
 @telefono nvarchar (20),
@@ -1176,7 +1177,7 @@ create procedure [dbo].[SP_Insertar_Usuario]
 )
 as
 begin
-INSERT INTO [dbo].[usuario]
+INSERT INTO [dbo].[empleado]
            ([nombre]
            ,[telefono]
            ,[rol_id]
@@ -1186,18 +1187,33 @@ INSERT INTO [dbo].[usuario]
            (@nombre,@telefono,@rol_id,@email)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Listar_Distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Listar_distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Listar_Distribucion]
+create procedure [dbo].[SP_Listar_distribucion]
 as
 begin
-SELECT [id_Distribucion] as [Identificacion Distribucion]
-      ,[id_Equipo] as [Identificacion Equipo]
-      ,[id_usuario] as [Identificacion Usuario]
+SELECT [id_Distribucion] as [ID Distribucion]
+	  ,[id_empleado] as [Empleado]
+      ,dbo.distribucion.id_Equipo as [ID Equipo]
+	  ,dbo.torres.marca as [Marca Torre]
+	  ,dbo.teclados.marca_Teclado as [Marca Teclado]
+	  ,dbo.ratones.marca_Raton as [Marca Mouse]
+	  ,dbo.discos.tipo_Disco as [Tipo Disco]
+	  ,dbo.memorias.tipo_Memoria as [Tipo Memoria]
+	  ,dbo.monitores.marca_Monitor as [Marca Monitor]
+      
   FROM [dbo].[Distribucion]
+
+  left join equipos on dbo.distribucion.id_Equipo = dbo.equipos.id_Equipo
+  left join torres on dbo.equipos.torre_Id = dbo.torres.id_Torre
+  left join teclados on dbo.equipos.teclado_Id = dbo.teclados.id_Teclado
+  left join ratones on dbo.equipos.raton_Id = dbo.ratones.id_Raton
+  left join discos on dbo.equipos.disco_Id = dbo.discos.id_Disco
+  left join memorias on dbo.equipos.Memoria_Id = dbo.memorias.id_Memoria
+  left join monitores on dbo.equipos.Monitor_Id = dbo.monitores.id_Monitor
 end
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Listar_Disco]    Script Date: 29/04/2023 08:40:29 a. m. ******/
@@ -1345,20 +1361,20 @@ SELECT dbo.[torres].id_Torre as [Identificacion Torre]
    LEFT JOIN dbo.discos on dbo.torres.id_Disco = dbo.discos.id_Disco
    LEFT JOIN dbo.memorias on dbo.torres.id_Memoria = dbo.memorias.id_Memoria
 end
-/****** Object:  StoredProcedure [dbo].[SP_Listar_Usuarios]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Listar_Empleados]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_Listar_Usuarios]
+create procedure [dbo].[SP_Listar_Empleados]
 as
 begin
-SELECT [id_usuario] as [Identificacion Usuario]
-      ,[nombre] as [Nombre Usuario]
-      ,[telefono] as [Telefono Usuario]
-      ,[rol_id] as [Rol Usuario]
-      ,[email] as [Email Usuario]
-  FROM [dbo].[usuario]
+SELECT [id_empleado] as [Identificacion Empleado]
+      ,[nombre] as [Nombre Empleado]
+      ,[telefono] as [Telefono Empleado]
+      ,[rol_id] as [Rol Empleado]
+      ,[email] as [Email Empleado]
+  FROM [dbo].[empleado]
 end
 /****** Object:  StoredProcedure [dbo].[SP_Listar_Memorias]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
@@ -1386,8 +1402,8 @@ INSERT INTO roles
 	(3, 'Gerente Administrativo')
 GO
 
-INSERT INTO usuario 
-	(id_usuario , nombre , telefono , rol_id , email )
+INSERT INTO empleado 
+	(id_empleado , nombre , telefono , rol_id , email )
  VALUES 
 	(116860083 , 'Vanessa Ureña' , 88736422 , 1 , 'vane@outlook.com') ,
 	(117070384 , 'Diana Monge' , 88836423 , 3 , 'di@hotmail.com' ) ,
@@ -1431,13 +1447,7 @@ VALUES
 	(2 , 'INALAMBRICO' , 'DELL' , 'DM5670' )
 GO
 
-INSERT INTO torres
-	(id_Torre , marca , modelo , id_Disco , id_Memoria)
-VALUES 
-	(1 , 'DELL' , 'Vostro 3710' , 3 , 3) ,
-	(2 , 'HP', 'ProDesk 400 G7' , 1 , 2) , 
-	(3 , 'LENOVO' , 'ThinkCentre M75s' , 2 , 2)
-GO
+
 INSERT INTO otros 
 	(id_Otro, tipo_Otro , marca_Otro , modelo_Otro)
 VALUES 
@@ -1450,16 +1460,23 @@ VALUES
 	(1, 'ACTIVO '),
 	(2 ,'INACTIVO')
 GO
+
+INSERT INTO torres
+	(id_Torre , marca , modelo , id_Disco , id_Memoria)
+VALUES 
+	(1 , 'DELL' , 'Vostro 3710' , 3 , 3) ,
+	(2 , 'HP', 'ProDesk 400 G7' , 1 , 2) , 
+	(3 , 'LENOVO' , 'ThinkCentre M75s' , 2 , 2)
+GO
 INSERT INTO equipos 
 	(id_Equipo , estado_Id , torre_Id , teclado_Id , raton_Id ,otro_Id , disco_Id ,memoria_Id , monitor_Id)
 VALUES 
-	(1, 2,3,2,1,2,3,4,2),
-	(2 ,1,2,1,1,2,3,1,1),
-	(3 ,1,2,2,1,2,1,1,1)
+	(1, 2,3,2,1,2,2,2,2),
+	(2 ,1,2,1,1,2,1,2,1),
+	(3 ,1,2,2,1,2,1,2,1)
 GO
-
-INSERT INTO Distribucion
-     ([id_Distribucion] , id_Equipo , id_usuario )
+INSERT INTO distribucion
+     ([id_distribucion] , id_Equipo , id_empleado )
 VALUES
 	(1, 1, 116860083) ,
 	(2, 2, 117070384),

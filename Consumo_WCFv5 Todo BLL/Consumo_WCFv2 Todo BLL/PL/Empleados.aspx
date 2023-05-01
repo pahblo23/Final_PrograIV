@@ -103,28 +103,24 @@
             <br /> <br/>
              <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
              &nbsp;
-             &nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
             <br /> <br/>
              <asp:Label ID="lblRol" runat="server" Text="ID-Rol"></asp:Label>
              &nbsp;
-             &nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtRol" runat="server"></asp:TextBox>
             <br /> <br/>
              <asp:Label ID="lblTelefono" runat="server" Text="Teléfono"></asp:Label>
              &nbsp;
-             &nbsp;
+             &nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="Txttelefono" runat="server"></asp:TextBox>
             <br /> <br/>
              <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
              &nbsp;
-             &nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             <br /> <br/>
-             <asp:Label ID="lblSexo" runat="server" Text="Sexo"></asp:Label>
-             &nbsp;
-             &nbsp;
-            <asp:TextBox ID="txtSexo" runat="server"></asp:TextBox>
             <br /> <br/>
             </div>
     </form>

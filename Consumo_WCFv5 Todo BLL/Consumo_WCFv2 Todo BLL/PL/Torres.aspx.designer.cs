@@ -51,76 +51,76 @@ namespace PL
         protected global::System.Web.UI.WebControls.ImageButton btnFiltrar;
 
         /// <summary>
-        /// lbl_IdTeclado control.
+        /// lbl_IdTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_IdTorres;
+        protected global::System.Web.UI.WebControls.Label lbl_IdTorre;
 
         /// <summary>
-        /// txt_IdTeclado control.
+        /// txt_IdTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdTorres;
+        protected global::System.Web.UI.WebControls.TextBox txt_IdTorre;
 
         /// <summary>
-        /// lbl_TipoTeclado control.
+        /// lbl_TipoTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_TipoTorres;
+        protected global::System.Web.UI.WebControls.Label lbl_TipoTorre;
 
         /// <summary>
-        /// txt_TipoTeclado control.
+        /// txt_TipoTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TipoTorres;
+        protected global::System.Web.UI.WebControls.TextBox txt_TipoTorre;
 
         /// <summary>
-        /// lbl_MarcaTeclado control.
+        /// lbl_MarcaTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_MarcaTorres;
+        protected global::System.Web.UI.WebControls.Label lbl_MarcaTorre;
 
         /// <summary>
-        /// txt_MarcaTeclado control.
+        /// txt_MarcaTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_MarcaTorres;
+        protected global::System.Web.UI.WebControls.TextBox txt_MarcaTorre;
 
         /// <summary>
-        /// lbl_ModeloTeclado control.
+        /// lbl_ModeloTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ModeloTorres;
+        protected global::System.Web.UI.WebControls.Label lbl_ModeloTorre;
 
         /// <summary>
-        /// txt_ModeloTeclado control.
+        /// txt_ModeloTorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ModeloTorres;
+        protected global::System.Web.UI.WebControls.TextBox txt_ModeloTorre;
 
         /// <summary>
         /// btn_Guardar control.

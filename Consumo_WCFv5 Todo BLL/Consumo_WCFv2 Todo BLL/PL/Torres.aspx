@@ -50,29 +50,29 @@
                 <br />
             </div>
             <div id="div_Editar" style="display:none">
-                <p>Edición de Datos de Teclados.</p>
-                 <asp:Label ID="lbl_IdTeclado" runat="server" Text="Id: "></asp:Label> 
+                <p>Edicion de Datos de Torre.</p>
+                 <asp:Label ID="lbl_IdTorre" runat="server" Text="Id: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_IdTeclado" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox ID="txt_IdTorre" runat="server" Height="31px" Width="375px"></asp:TextBox>
                     &nbsp;
                     &nbsp;
-                    <asp:Label ID="lbl_TipoTeclado" runat="server" Text="Tipo: "></asp:Label> 
+                    <asp:Label ID="lbl_TipoTorre" runat="server" Text="Tipo: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_TipoTeclado" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox ID="txt_TipoTorre" runat="server" Height="31px" Width="375px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label ID="lbl_MarcaTeclado" runat="server" Text="Marca: "></asp:Label> 
+                    <asp:Label ID="lbl_MarcaTorre" runat="server" Text="Marca: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_MarcaTeclado" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox ID="txt_MarcaTorre" runat="server" Height="31px" Width="375px"></asp:TextBox>
                     &nbsp;
                     &nbsp;
-                    <asp:Label ID="lbl_ModeloTeclado" runat="server" Text="Modelo: "></asp:Label> 
+                    <asp:Label ID="lbl_ModeloTorre" runat="server" Text="Modelo: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_ModeloTeclado" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox ID="txt_ModeloTorre" runat="server" Height="31px" Width="375px"></asp:TextBox>
                     <br />
                     <br />
                     <div style="text-align:center">
@@ -90,7 +90,7 @@
         
             </div>
             <div>
-                <asp:GridView ID="dgv_Torres" runat="server" Width="900px" DataSourceID="grid_Torres"></asp:GridView>
+                <asp:GridView ID="dgv_Torres" runat="server" Width="900px"></asp:GridView>
             </div>
 
         </form>

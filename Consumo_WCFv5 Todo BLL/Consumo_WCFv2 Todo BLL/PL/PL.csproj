@@ -355,6 +355,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site_Distribucion.Master.cs">
+      <DependentUpon>Site_Distribucion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Distribucion.Master.designer.cs">
+      <DependentUpon>Site_Distribucion.Master</DependentUpon>
+    </Compile>
     <Compile Include="Torres.aspx.cs">
       <DependentUpon>Torres.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -384,6 +391,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Site_Distribucion.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

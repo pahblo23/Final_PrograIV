@@ -66,7 +66,7 @@ namespace PL
 
             Obj_Equipos_BLL.List_Filt_Equipo(ref Obj_Equipos_DAL);
 
-            Obj_Equipos_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EQUIPO ---");
+           // Obj_Equipos_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EQUIPO ---");
 
             ddl_IdEquipo.DataSource = null;
             ddl_IdEquipo.DataTextField = "Identificacion equipo";
@@ -74,7 +74,7 @@ namespace PL
             ddl_IdEquipo.DataSource = Obj_Equipos_DAL.dtDatos;
             ddl_IdEquipo.DataBind();
 
-            ddl_IdEquipo.SelectedValue = "0";
+            ddl_IdEquipo.SelectedValue = "1";
         }
 
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
@@ -116,8 +116,8 @@ namespace PL
 
             txt_IdDistribucion.Text = string.Empty;
             txt_filtrar.Text = string.Empty;
-            ddl_IdEmpleado.SelectedValue = string.Empty;
-            ddl_IdEquipo.SelectedValue = string.Empty;
+            ddl_IdEmpleado.SelectedValue ="0";
+            ddl_IdEquipo.SelectedValue = "0";
             CargarDatosDistribucion();
         }
     }

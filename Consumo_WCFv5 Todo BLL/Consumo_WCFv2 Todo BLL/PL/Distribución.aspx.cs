@@ -46,6 +46,7 @@ namespace PL
 
         private void CargarCombos()
         {
+            //ddl empleados
             obj_Empleados_DAL.iID_Empelado = 0;
 
             obj_Empleados_BLL.List_Filt_Empleado(ref obj_Empleados_DAL);
@@ -60,20 +61,7 @@ namespace PL
 
             ddl_IdEmpleado.SelectedValue = "0";
 
-            obj_Empleados_DAL.iID_Empelado = 0;
-
-            obj_Empleados_BLL.List_Filt_Empleado(ref obj_Empleados_DAL);
-
-            obj_Empleados_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EMPLEADO ---");
-
-            ddl_IdEmpleado.DataSource = null;
-            ddl_IdEmpleado.DataTextField = "Nombre Usuario";
-            ddl_IdEmpleado.DataValueField = "Identificacion Usuario";
-            ddl_IdEmpleado.DataSource = obj_Empleados_DAL.dtDatos;
-            ddl_IdEmpleado.DataBind();
-
-
-            ddl_IdEquipo.SelectedValue = "0";
+            //ddl equipos
             Obj_Equipos_DAL.iId_Equipo = 0;
 
             Obj_Equipos_BLL.List_Filt_Equipo(ref Obj_Equipos_DAL);
@@ -81,10 +69,12 @@ namespace PL
             Obj_Equipos_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EQUIPO ---");
 
             ddl_IdEquipo.DataSource = null;
-            ddl_IdEquipo.DataTextField = "marca";
+            ddl_IdEquipo.DataTextField = "Identificacion equipo";
             ddl_IdEquipo.DataValueField = "Identificacion equipo";
             ddl_IdEquipo.DataSource = Obj_Equipos_DAL.dtDatos;
             ddl_IdEquipo.DataBind();
+
+            ddl_IdEquipo.SelectedValue = "0";
         }
 
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)

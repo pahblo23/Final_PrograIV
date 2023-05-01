@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Teclados.aspx.cs" Inherits="PL.Teclados" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Torres.aspx.cs" Inherits="PL.Teclados" %>
 
 <!DOCTYPE html>
 
@@ -34,9 +34,9 @@
             <br />
             <br />
             <div>
-            <asp:Label ID="lblProducto" runat="server" Text="Id Teclado: "></asp:Label>
+            <asp:Label ID="lblProducto" runat="server" Text="Id Torre: "></asp:Label>
             &nbsp;
-            <asp:TextBox ID="txtaFiltProd" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_Filtrar_Torre" runat="server"></asp:TextBox>
              &nbsp;
              &nbsp;
              &nbsp;
@@ -90,7 +90,7 @@
         
             </div>
             <div>
-                <asp:GridView ID="dgv_Teclados" runat="server" Width="900px" DataSourceID="grid_Teclado"></asp:GridView>
+                <asp:GridView ID="dgv_Torres" runat="server" Width="900px" DataSourceID="grid_Torres"></asp:GridView>
             </div>
 
         </form>

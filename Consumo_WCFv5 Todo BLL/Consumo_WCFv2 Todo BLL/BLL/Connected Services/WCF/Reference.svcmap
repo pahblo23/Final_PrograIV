@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:83/WCF__BD.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:83/WCF_BD.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WCF__BD.xsd" MetadataType="Schema" ID="ab9d4c69-cba3-49fb-a975-dd37feac1e19" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd2" />
-    <MetadataFile FileName="WCF__BD1.xsd" MetadataType="Schema" ID="d7cafe4d-0a47-4190-a9f3-987207b0e379" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd0" />
-    <MetadataFile FileName="BD.wsdl" MetadataType="Wsdl" ID="a4adb82e-e522-402a-a4a0-e121a161bb55" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?wsdl" />
-    <MetadataFile FileName="WCF__BD2.xsd" MetadataType="Schema" ID="78f3e6ab-90a8-4808-8272-923db090bad6" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCF_BD.xsd" MetadataType="Schema" ID="8017c86a-e3c4-4b22-a4b6-d43dc334f72e" SourceId="1" SourceUrl="http://localhost:83/WCF_BD.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCF_BD1.xsd" MetadataType="Schema" ID="a7e69757-1170-4322-86ab-7887cbaf823f" SourceId="1" SourceUrl="http://localhost:83/WCF_BD.svc?xsd=xsd0" />
+    <MetadataFile FileName="BD1.wsdl" MetadataType="Wsdl" ID="d8c23678-5d01-4615-bd90-8a083f44eaf8" SourceId="1" SourceUrl="http://localhost:83/WCF_BD.svc?wsdl" />
+    <MetadataFile FileName="WCF_BD2.xsd" MetadataType="Schema" ID="f576ee6e-ee06-401a-91bf-773abb4a8c47" SourceId="1" SourceUrl="http://localhost:83/WCF_BD.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

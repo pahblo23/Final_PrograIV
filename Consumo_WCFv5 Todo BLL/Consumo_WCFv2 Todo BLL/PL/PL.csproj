@@ -106,16 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <None Include="Connected Services\WCF\BD1.wsdl" />
+    <None Include="Connected Services\WCF\BD.wsdl" />
     <None Include="Connected Services\WCF\configuration91.svcinfo" />
     <None Include="Connected Services\WCF\configuration.svcinfo" />
     <None Include="Connected Services\WCF\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\WCF_CompuStore\configuration91.svcinfo" />
-    <None Include="Connected Services\WCF_CompuStore\configuration.svcinfo" />
-    <None Include="Connected Services\WCF_CompuStore\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -151,26 +145,16 @@
     <Content Include="Otros.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
-    <None Include="Connected Services\WCF\WCF__BD3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\WCF\WCF__BD31.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\WCF\WCF__BD32.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\WCF_CompuStore\BD.wsdl" />
-    <None Include="Connected Services\WCF_CompuStore\WCF__BD.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\WCF_CompuStore\WCF__BD1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\WCF_CompuStore\WCF__BD2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Prueba.Master" />
+    <None Include="Connected Services\WCF\WCF_BD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF\WCF_BD1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF\WCF_BD2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Ratones.aspx" />
     <Content Include="Recursos\Estilos\Estilos_Contacto.css" />
@@ -217,6 +201,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Torres.aspx" />
     <Content Include="Teclados.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -234,11 +219,6 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connected Services\WCF\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\WCF_CompuStore\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -373,6 +353,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Torres.aspx.cs">
+      <DependentUpon>Torres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Torres.aspx.designer.cs">
+      <DependentUpon>Torres.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Teclados.aspx.cs">
       <DependentUpon>Teclados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -407,7 +394,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\WCF\" />
-    <WCFMetadataStorage Include="Connected Services\WCF_CompuStore\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

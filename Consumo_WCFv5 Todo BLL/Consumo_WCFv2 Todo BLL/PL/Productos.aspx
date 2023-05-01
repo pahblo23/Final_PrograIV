@@ -96,7 +96,7 @@
         
             </div>
             <div>
-                <asp:GridView ID="dgv_Torres" runat="server" Width="900px"></asp:GridView>
+                <asp:GridView ID="dgv_Productos" runat="server" Width="900px"></asp:GridView>
             </div>
         </form>
     </div>

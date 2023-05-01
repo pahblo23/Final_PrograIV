@@ -11,7 +11,7 @@ namespace PL
 {
 
 
-    public partial class Productos
+    public partial class Torres
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lblProducto;
 
         /// <summary>
-        /// txtaFiltProd control.
+        /// txt_Filtrar_Torre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtaFiltProd;
+        protected global::System.Web.UI.WebControls.TextBox txt_Filtrar_Torre;
 
         /// <summary>
         /// btnFiltrar control.
@@ -51,94 +51,76 @@ namespace PL
         protected global::System.Web.UI.WebControls.ImageButton btnFiltrar;
 
         /// <summary>
-        /// lbl_IdTorre control.
+        /// lbl_IdTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_IdTorre;
+        protected global::System.Web.UI.WebControls.Label lbl_IdTorres;
 
         /// <summary>
-        /// txt_IdTorre control.
+        /// txt_IdTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdTorre;
+        protected global::System.Web.UI.WebControls.TextBox txt_IdTorres;
 
         /// <summary>
-        /// lbl_MarcaTorre control.
+        /// lbl_TipoTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_MarcaTorre;
+        protected global::System.Web.UI.WebControls.Label lbl_TipoTorres;
 
         /// <summary>
-        /// txt_MarcaTorre control.
+        /// txt_TipoTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_MarcaTorre;
+        protected global::System.Web.UI.WebControls.TextBox txt_TipoTorres;
 
         /// <summary>
-        /// lbl_ModeloTorre control.
+        /// lbl_MarcaTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ModeloTorre;
+        protected global::System.Web.UI.WebControls.Label lbl_MarcaTorres;
 
         /// <summary>
-        /// txt_ModeloTorre control.
+        /// txt_MarcaTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ModeloTorre;
+        protected global::System.Web.UI.WebControls.TextBox txt_MarcaTorres;
 
         /// <summary>
-        /// lbl_IdDisco control.
+        /// lbl_ModeloTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_IdDisco;
+        protected global::System.Web.UI.WebControls.Label lbl_ModeloTorres;
 
         /// <summary>
-        /// txt_IdDisco control.
+        /// txt_ModeloTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdDisco;
-
-        /// <summary>
-        /// lbl_IdMemoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_IdMemoria;
-
-        /// <summary>
-        /// txt_IdMemoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdMemoria;
+        protected global::System.Web.UI.WebControls.TextBox txt_ModeloTorres;
 
         /// <summary>
         /// btn_Guardar control.
@@ -150,13 +132,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.ImageButton btn_Guardar;
 
         /// <summary>
-        /// btn_Eliminar control.
+        /// txt_Eliminar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btn_Eliminar;
+        protected global::System.Web.UI.WebControls.ImageButton txt_Eliminar;
 
         /// <summary>
         /// btnInsertar control.
@@ -168,12 +150,12 @@ namespace PL
         protected global::System.Web.UI.WebControls.ImageButton btnInsertar;
 
         /// <summary>
-        /// dgv_Productos control.
+        /// dgv_Torres control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgv_Productos;
+        protected global::System.Web.UI.WebControls.GridView dgv_Torres;
     }
 }

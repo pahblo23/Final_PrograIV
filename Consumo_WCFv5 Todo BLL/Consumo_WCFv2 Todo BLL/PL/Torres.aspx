@@ -34,9 +34,9 @@
             <br />
             <br />
             <div>
-            <asp:Label ID="lblProducto" runat="server" Text="Id Teclado: "></asp:Label>
+            <asp:Label ID="lblProducto" runat="server" Text="Id Torre: "></asp:Label>
             &nbsp;
-            <asp:TextBox ID="txtaFiltProd" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_Filtrar_Torre" runat="server"></asp:TextBox>
              &nbsp;
              &nbsp;
              &nbsp;

@@ -33,13 +33,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lblProducto;
 
         /// <summary>
-        /// txtaFiltProd control.
+        /// txt_Filtrar_Torre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtaFiltProd;
+        protected global::System.Web.UI.WebControls.TextBox txt_Filtrar_Torre;
 
         /// <summary>
         /// btnFiltrar control.

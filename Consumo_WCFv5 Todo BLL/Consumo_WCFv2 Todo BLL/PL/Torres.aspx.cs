@@ -24,7 +24,7 @@ namespace PL
 
         private void CargarDatosTorres()
         {
-            if (txtaFiltProd.Text == string.Empty)
+            if (txtaFiltTorre.Text == string.Empty)
             {
                 Obj_Teclados_DAL.iId_Torre = 0;
             }

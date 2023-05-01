@@ -25,55 +25,53 @@
                     <asp:Label ID="lbl_IdEquipo" runat="server" Text="Id: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_IdEquipo" runat="server" Height="31px" Width="375px"></asp:TextBox>
-                    &nbsp;
+                     <asp:TextBox ID="txt_IdEquipo" runat="server"></asp:TextBox>                   &nbsp;
                     &nbsp;
                     <asp:Label ID="lbl_Estado" runat="server" Text="Estado: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_Estado" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:DropDownList ID="ddlEstado" runat="server"></asp:DropDownList>
                     <br />
                     <br />
                     <asp:Label ID="lbl_TipoTorre" runat="server" Text="Tipo Torre: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_TipoTorre" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:DropDownList ID="ddltipotorre" runat="server"></asp:DropDownList>
                     &nbsp;
                     &nbsp;
                     <asp:Label ID="lbl_TipoTeclado" runat="server" Text="Tipo Teclado: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_TipoTeclado" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:DropDownList ID="ddltipoteclado" runat="server"></asp:DropDownList>
                     <br />
                     <br />
                     <asp:Label ID="lbl_TipoRaton" runat="server" Text="Tipo Raton: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_TipoRaton" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:DropDownList ID="ddlTipoRaton" runat="server"></asp:DropDownList>
                     &nbsp;
                     &nbsp;
                     <asp:Label ID="lbl_TipoOtro" runat="server" Text="Tipo Otro: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_TipoOtro" runat="server" Height="31px" Width="375px"></asp:TextBox>
-                    <br />
+                    <asp:DropDownList ID="ddlTipoOtro" runat="server"></asp:DropDownList>
                     <br />
                     <asp:Label ID="lbl_TipoDisco" runat="server" Text="Marca: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_TipoDisco" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:DropDownList ID="ddltipodisco" runat="server"></asp:DropDownList>
                     &nbsp;
                     &nbsp;
                     <asp:Label ID="lbl_MarcaMemoria" runat="server" Text="Marca Memoria: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_MarcaMemoria" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:DropDownList ID="ddlmarcamemoria" runat="server"></asp:DropDownList>
                     <br />
                     <br />
                     <asp:Label ID="lbl_MarcaMonitor" runat="server" Text="Marca Monitor: "></asp:Label> 
                     &nbsp;
                     &nbsp;
-                    <asp:TextBox ID="txt_MarcaMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                   <asp:DropDownList ID="ddlmarcamonitor" runat="server"></asp:DropDownList>
                     <br />
                     <br />
                     <div style="text-align:center">

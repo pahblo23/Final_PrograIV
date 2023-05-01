@@ -113,6 +113,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\WCF\WCF__BD.disco" />
     <Content Include="Contact.aspx" />
     <Content Include="Contacto.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -157,6 +158,8 @@
     <None Include="Connected Services\WCF\WCF__BD2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Properties\DataSources\System.Data.DataTable1.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable2.datasource" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Ratones.aspx" />
     <Content Include="Recursos\Estilos\Estilos_Contacto.css" />
@@ -371,6 +374,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site_Distribucion.Master.cs">
+      <DependentUpon>Site_Distribucion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Distribucion.Master.designer.cs">
+      <DependentUpon>Site_Distribucion.Master</DependentUpon>
+    </Compile>
     <Compile Include="Torres.aspx.cs">
       <DependentUpon>Torres.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -400,6 +410,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Site_Distribucion.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

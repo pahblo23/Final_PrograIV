@@ -46,46 +46,46 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
-            //Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
-            //Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
-            //Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
-            //Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
+            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
+            Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
+            Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
+            Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
 
-            //Obj_Teclados_BLL.Actualizar_Teclado(ref Obj_Teclados_DAL);
+            Obj_Teclados_BLL.Actualizar_Teclado(ref Obj_Teclados_DAL);
 
-            //txtaFiltProd.Text = string.Empty;
-            //txt_IdTeclado.Text = string.Empty;
-            //txt_MarcaTeclado.Text = string.Empty;
-            //txt_ModeloTeclado.Text =  string.Empty;
-            //txt_TipoTeclado.Text = string.Empty;
-            //CargarDatosTeclados();
+            txtaFiltProd.Text = string.Empty;
+            txt_IdTeclado.Text = string.Empty;
+            txt_MarcaTeclado.Text = string.Empty;
+            txt_ModeloTeclado.Text = string.Empty;
+            txt_TipoTeclado.Text = string.Empty;
+            CargarDatosTeclados();
         }
 
         protected void txt_Eliminar_Click(object sender, EventArgs e)
         {
-            //Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
+            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
 
-            //Obj_Teclados_BLL.Borrar_Teclado(ref Obj_Teclados_DAL);
+            Obj_Teclados_BLL.Borrar_Teclado(ref Obj_Teclados_DAL);
 
-            //txt_IdTeclado.Text = string.Empty;
-            //CargarDatosTeclados();
+            txt_IdTeclado.Text = string.Empty;
+            CargarDatosTeclados();
         }
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
-            //Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
-            //Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
-            //Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
-            //Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
-          
-            //Obj_Teclados_BLL.Insertar_Teclados(ref Obj_Teclados_DAL);
+            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
+            Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
+            Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
+            Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
 
-            //txtaFiltProd.Text = string.Empty;
-            //txt_IdTeclado.Text = string.Empty;
-            //txt_MarcaTeclado.Text = string.Empty;
-            //txt_ModeloTeclado.Text = string.Empty;
-            //txt_TipoTeclado.Text = string.Empty;
-            //CargarDatosTeclados();
+            Obj_Teclados_BLL.Insertar_Teclados(ref Obj_Teclados_DAL);
+
+            txtaFiltProd.Text = string.Empty;
+            txt_IdTeclado.Text = string.Empty;
+            txt_MarcaTeclado.Text = string.Empty;
+            txt_ModeloTeclado.Text = string.Empty;
+            txt_TipoTeclado.Text = string.Empty;
+            CargarDatosTeclados();
         }
     }
 }

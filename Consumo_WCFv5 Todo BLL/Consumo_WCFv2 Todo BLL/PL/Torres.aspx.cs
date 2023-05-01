@@ -24,13 +24,13 @@ namespace PL
 
         private void CargarDatosTorres()
         {
-            if (txt_IdTorres.Text == string.Empty)
+            if (txt_Filtrar_Torre.Text == string.Empty)
             {
                 Obj_Torres_DAL.iId_Torre = 0;
             }
             else
             {
-                Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
+                Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_Filtrar_Torre.Text.Trim());
             }
             Obj_Torres_BLL.List_Filt_Torre(ref Obj_Torres_DAL);
             
@@ -46,46 +46,45 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
-            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
-            Obj_Torres_DAL.sMarca_Torre = txt_MarcaTorres.Text.Trim();
-            Obj_Torres_DAL.sModelo_Torre = txt_ModeloTorres.Text.Trim();
+            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_Filtrar_Torre.Text.Trim());
+            Obj_Torres_DAL.sMarca_Torre = txt_Filtrar_Torre.Text.Trim();
+            Obj_Torres_DAL.sModelo_Torre = txt_Filtrar_Torre.Text.Trim();
 
 
             Obj_Torres_BLL.Actualizar_Torre(ref Obj_Torres_DAL);
 
-            //txt
-            //txtaFiltProd.Text = string.Empty;
-            //txt_IdTeclado.Text = string.Empty;
-            //txt_MarcaTeclado.Text = string.Empty;
-            //txt_ModeloTeclado.Text =  string.Empty;
-            //txt_TipoTeclado.Text = string.Empty;
+            txt_Filtrar_Torre.Text = string.Empty;
+            txt_IdTeclado.Text = string.Empty;
+            txt_MarcaTeclado.Text = string.Empty;
+            txt_ModeloTeclado.Text = string.Empty;
+            txt_TipoTeclado.Text = string.Empty;
             CargarDatosTorres();
         }
 
         protected void txt_Eliminar_Click(object sender, EventArgs e)
         {
-            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
+            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_Filtrar_Torre.Text.Trim());
 
             Obj_Torres_BLL.Borrar_Torre(ref Obj_Torres_DAL);
 
-            txt_IdTorres.Text = string.Empty;
+            txt_Filtrar_Torre.Text = string.Empty;
             CargarDatosTorres();
         }
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
-            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
+            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_Filtrar_Torre.Text.Trim());
             
-            Obj_Torres_DAL.sMarca_Torre = txt_MarcaTorres.Text.Trim();
-            Obj_Torres_DAL.sModelo_Torre = txt_ModeloTorres.Text.Trim();
+            Obj_Torres_DAL.sMarca_Torre = txt_Filtrar_Torre.Text.Trim();
+            Obj_Torres_DAL.sModelo_Torre = txt_Filtrar_Torre.Text.Trim();
           
             Obj_Torres_BLL.Insertar_Torre(ref Obj_Torres_DAL);
 
-            //txtaFiltProd.Text = string.Empty;
-            //txt_IdTeclado.Text = string.Empty;
-            //txt_MarcaTeclado.Text = string.Empty;
-            //txt_ModeloTeclado.Text = string.Empty;
-            //txt_TipoTeclado.Text = string.Empty;
+            txt_Filtrar_Torre.Text = string.Empty;
+            txt_IdTeclado.Text = string.Empty;
+            txt_MarcaTeclado.Text = string.Empty;
+            txt_ModeloTeclado.Text = string.Empty;
+            txt_TipoTeclado.Text = string.Empty;
             CargarDatosTorres();
         }
     }

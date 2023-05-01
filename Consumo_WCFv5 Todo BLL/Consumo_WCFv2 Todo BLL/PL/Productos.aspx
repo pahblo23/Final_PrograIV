@@ -17,8 +17,8 @@
     </a>
 <body>
     <div class="sidebar">
-        <a id="Enlace" href="Productos.aspx">Torres</a>
-        <a id="Enlace" href="Teclados.aspx">Teclados</a>
+        <a id="Enlace" href="frm_Torres.aspx">Torres</a>
+        <a id="Enlace" href="frm_Teclados.aspx">Teclados</a>
         <a id="Enlace" href="Monitores.aspx">Monitores</a>
         <a id="Enlace" href="Ratones.aspx">Ratones</a>
         <a id="Enlace" href="Discos.aspx">Discos</a>

@@ -128,6 +128,8 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="frm_Contactanos.aspx" />
+    <Content Include="frm_Teclados.aspx" />
+    <Content Include="frm_Torres.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -280,6 +282,20 @@
     </Compile>
     <Compile Include="frm_Contactanos.aspx.designer.cs">
       <DependentUpon>frm_Contactanos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Teclados.aspx.cs">
+      <DependentUpon>frm_Teclados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_Teclados.aspx.designer.cs">
+      <DependentUpon>frm_Teclados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Torres.aspx.cs">
+      <DependentUpon>frm_Torres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_Torres.aspx.designer.cs">
+      <DependentUpon>frm_Torres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -128,6 +128,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Discos.aspx" />
+    <Content Include="Distribución.aspx" />
     <Content Include="Empleados.aspx" />
     <Content Include="Equipos.aspx" />
     <Content Include="favicon.ico" />
@@ -269,6 +270,13 @@
     </Compile>
     <Compile Include="Discos.aspx.designer.cs">
       <DependentUpon>Discos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Distribución.aspx.cs">
+      <DependentUpon>Distribución.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Distribución.aspx.designer.cs">
+      <DependentUpon>Distribución.aspx</DependentUpon>
     </Compile>
     <Compile Include="Empleados.aspx.cs">
       <DependentUpon>Empleados.aspx</DependentUpon>

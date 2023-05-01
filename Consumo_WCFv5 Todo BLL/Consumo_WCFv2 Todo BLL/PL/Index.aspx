@@ -15,6 +15,7 @@
     <nav>
         <ul class="nav">
             <!--<li><a id="Enlace" href="Empleados.aspx">Usuarios</a></li> -->
+            <li><a id="Enlace" href="Distribución.aspx">Distribución</a></li>
             <li><a id="Enlace" href="Productos.aspx">Inventario</a></li>
             <li><a id="Enlace" href="frm_Contactanos.aspx">Contactenos</a></li>
             <li><a id="Enlace" href="Contact.aspx">Nosotros</a></li>

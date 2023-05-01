@@ -54,10 +54,10 @@ namespace PL
             Obj_Torres_BLL.Actualizar_Torre(ref Obj_Torres_DAL);
 
             txt_Filtrar_Torre.Text = string.Empty;
-            txt_IdTeclado.Text = string.Empty;
-            txt_MarcaTeclado.Text = string.Empty;
-            txt_ModeloTeclado.Text = string.Empty;
-            txt_TipoTeclado.Text = string.Empty;
+            txt_IdTorre.Text = string.Empty;
+            txt_MarcaTorre.Text = string.Empty;
+            txt_ModeloTorre.Text = string.Empty;
+            txt_TipoTorre.Text = string.Empty;
             CargarDatosTorres();
         }
 
@@ -81,10 +81,10 @@ namespace PL
             Obj_Torres_BLL.Insertar_Torre(ref Obj_Torres_DAL);
 
             txt_Filtrar_Torre.Text = string.Empty;
-            txt_IdTeclado.Text = string.Empty;
-            txt_MarcaTeclado.Text = string.Empty;
-            txt_ModeloTeclado.Text = string.Empty;
-            txt_TipoTeclado.Text = string.Empty;
+            txt_IdTorre.Text = string.Empty;
+            txt_MarcaTorre.Text = string.Empty;
+            txt_ModeloTorre.Text = string.Empty;
+            txt_TipoTorre.Text = string.Empty;
             CargarDatosTorres();
         }
     }

@@ -135,8 +135,8 @@ namespace PL
             Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN ESTADO ---");
 
             ddlEstado.DataSource = null;
-            ddlEstado.DataTextField = "Tipo Estadp";
-            ddlEstado.DataValueField = "Identificacion Estado";
+            ddlEstado.DataTextField = "Nombre Usuario";
+            ddlEstado.DataValueField = "Identificacion Usuario";
             ddlEstado.DataSource = Obj_Equipo_DAL.dtDatos;
             ddlEstado.DataBind();
 
@@ -153,8 +153,8 @@ namespace PL
             Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
 
             ddltipotorre.DataSource = null;
-            ddltipotorre.DataTextField = "Tipo Torre";
-            ddltipotorre.DataValueField = "Identificacion Torre";
+            ddltipotorre.DataTextField = "Nombre Usuario";
+            ddltipotorre.DataValueField = "Identificacion Usuario";
             ddltipotorre.DataSource = Obj_Equipo_DAL.dtDatos;
             ddltipotorre.DataBind();
 
@@ -170,8 +170,8 @@ namespace PL
             Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN TECLADO ---");
 
             ddltipoteclado.DataSource = null;
-            ddltipoteclado.DataTextField = "Tipo Teclado";
-            ddltipoteclado.DataValueField = "Identificacion Teclado";
+            ddltipoteclado.DataTextField = "Nombre Usuario";
+            ddltipoteclado.DataValueField = "Identificacion Usuario";
             ddltipoteclado.DataSource = Obj_Equipo_DAL.dtDatos;
             ddltipoteclado.DataBind();
 
@@ -187,8 +187,8 @@ namespace PL
             Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN RATON ---");
 
             ddlTipoRaton.DataSource = null;
-            ddlTipoRaton.DataTextField = "Tipo Raton";
-            ddlTipoRaton.DataValueField = "Identificacion Raton";
+            ddlTipoRaton.DataTextField = "Nombre Usuario";
+            ddlTipoRaton.DataValueField = "Identificacion Usuario";
             ddlTipoRaton.DataSource = Obj_Equipo_DAL.dtDatos;
             ddlTipoRaton.DataBind();
 
@@ -201,11 +201,11 @@ namespace PL
 
             Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE Otro ---");
+            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
 
             ddlTipoOtro.DataSource = null;
-            ddlTipoOtro.DataTextField = "Tipo Otro";
-            ddlTipoOtro.DataValueField = "Identificacion Otro";
+            ddlTipoOtro.DataTextField = "Nombre Usuario";
+            ddlTipoOtro.DataValueField = "Identificacion Usuario";
             ddlTipoOtro.DataSource = Obj_Equipo_DAL.dtDatos;
             ddlTipoOtro.DataBind();
 
@@ -218,11 +218,11 @@ namespace PL
 
             Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN DISCO---");
+            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
 
             ddltipodisco.DataSource = null;
-            ddltipodisco.DataTextField = "Tipo Disco";
-            ddltipodisco.DataValueField = "Identificacion disco";
+            ddltipodisco.DataTextField = "Nombre Usuario";
+            ddltipodisco.DataValueField = "Identificacion Usuario";
             ddltipodisco.DataSource = Obj_Equipo_DAL.dtDatos;
             ddltipodisco.DataBind();
 
@@ -235,11 +235,11 @@ namespace PL
 
             Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA MEMORIA ---");
+            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
 
             ddlmarcamemoria.DataSource = null;
-            ddlmarcamemoria.DataTextField = "Tipo memoria";
-            ddlmarcamemoria.DataValueField = "Identificacion memoria";
+            ddlmarcamemoria.DataTextField = "Nombre Usuario";
+            ddlmarcamemoria.DataValueField = "Identificacion Usuario";
             ddlmarcamemoria.DataSource = Obj_Equipo_DAL.dtDatos;
             ddlmarcamemoria.DataBind();
 
@@ -252,11 +252,11 @@ namespace PL
 
             Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN MONITOR ---");
+            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
 
             ddlmarcamonitor.DataSource = null;
-            ddlmarcamonitor.DataTextField = "Tipo monitor";
-            ddlmarcamonitor.DataValueField = "Identificacion monitor";
+            ddlmarcamonitor.DataTextField = "Nombre Usuario";
+            ddlmarcamonitor.DataValueField = "Identificacion Usuario";
             ddlmarcamonitor.DataSource = Obj_Equipo_DAL.dtDatos;
             ddlmarcamonitor.DataBind();
 

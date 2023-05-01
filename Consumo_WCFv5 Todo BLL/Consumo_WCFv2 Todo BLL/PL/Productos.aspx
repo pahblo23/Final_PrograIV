@@ -33,7 +33,7 @@
             <div>
 
                  
-         <asp:Label ID="lblProducto" runat="server" Text="Id Torre: "></asp:Label>
+         <asp:Label ID="lblProducto" runat="server" Text="Id Producto: "></asp:Label>
                 &nbsp;
          <asp:TextBox ID="txtaFiltProd" runat="server"></asp:TextBox>
                 &nbsp;

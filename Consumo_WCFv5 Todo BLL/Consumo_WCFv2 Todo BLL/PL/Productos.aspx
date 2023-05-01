@@ -8,6 +8,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <!--<link href="styles/style.css" rel="stylesheet" /> -->
     <link href="Recursos/Estilos/Estilos_Inicio.css" rel="stylesheet" />
+    <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
     <title></title>
 </head>
 <a href="Index.aspx">

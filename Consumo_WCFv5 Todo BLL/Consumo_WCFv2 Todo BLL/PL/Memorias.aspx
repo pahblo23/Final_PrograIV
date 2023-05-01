@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Memorias.aspx.cs" Inherits="PL.Memorias" %>
-
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
      <div>
             <asp:Label ID="lbl_Memoria" runat="server" Text="Id Memoria: "></asp:Label>

@@ -51,14 +51,14 @@ namespace PL
             Obj_Torres_DAL.sModelo_Torre = txt_ModeloTorres.Text.Trim();
 
 
-            Obj_Torres_BLL.Actualizar_Torre(ref Obj_Torre_DAL);
+            Obj_Torres_BLL.Actualizar_Torre(ref Obj_Torres_DAL);
 
             txtaFiltProd.Text = string.Empty;
             txt_IdTeclado.Text = string.Empty;
             txt_MarcaTeclado.Text = string.Empty;
             txt_ModeloTeclado.Text =  string.Empty;
             txt_TipoTeclado.Text = string.Empty;
-            CargarDatosTeclados();
+            CargarDatosTorres();
         }
 
         protected void txt_Eliminar_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace PL
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
             Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
-            Obj_Torres_DAL. sTipo_Torre = txt_TipoTorres.Text.Trim();
+            
             Obj_Torres_DAL.sMarca_Torre = txt_MarcaTorres.Text.Trim();
             Obj_Torres_DAL.sModelo_Torre = txt_ModeloTorres.Text.Trim();
           

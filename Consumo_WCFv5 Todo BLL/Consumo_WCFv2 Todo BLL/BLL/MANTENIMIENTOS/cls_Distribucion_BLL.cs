@@ -31,7 +31,7 @@ namespace BLL.MANTENIMIENTOS
 
             Obj_Distribucion_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Distribucion_DAL.dtParametros);
 
-            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_Distribucion_DAL.iID_Dsitribucion);
+            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_distribucion", "1", Obj_Distribucion_DAL.iID_Dsitribucion);
 
             Obj_Distribucion_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["BORRAR_DISTRIBUCION"],
                 "NORMAL", Obj_Distribucion_DAL.dtParametros);

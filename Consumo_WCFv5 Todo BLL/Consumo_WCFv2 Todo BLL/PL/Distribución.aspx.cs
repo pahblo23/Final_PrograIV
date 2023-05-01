@@ -92,17 +92,19 @@ namespace PL
 
             txt_IdDistribucion.Text = string.Empty;
             txt_filtrar.Text = string.Empty;
-            ddl_IdEmpleado.SelectedValue = string.Empty;
-            ddl_IdEquipo.SelectedValue = string.Empty;
+            ddl_IdEmpleado.SelectedValue = "0";
+            ddl_IdEquipo.SelectedValue = "1";
             CargarDatosDistribucion();
         }
 
         protected void btn_Eliminar_Click(object sender, ImageClickEventArgs e)
         {
-            txt_IdDistribucion.Text = string.Empty;
+
+            Obj_Distribucion_DAL.iID_Dsitribucion = Convert.ToInt32(txt_IdDistribucion.Text.Trim());
 
             obj_Distribucion_BLL.Borrar_Distribucion(ref Obj_Distribucion_DAL);
 
+            txt_IdDistribucion.Text = string.Empty;
             txt_filtrar.Text = string.Empty;
             ddl_IdEmpleado.SelectedValue = "0";
             ddl_IdEquipo.SelectedValue = "1";
@@ -115,12 +117,12 @@ namespace PL
             Obj_Distribucion_DAL.iID_Empleado = Convert.ToInt32(ddl_IdEmpleado.SelectedValue.Trim());
             Obj_Distribucion_DAL.iID_Equipo = Convert.ToInt32(ddl_IdEquipo.SelectedValue.Trim());
 
-            obj_Distribucion_BLL.Actualizar_Distribucion(ref Obj_Distribucion_DAL);
+            obj_Distribucion_BLL.Insertar_Distribucion(ref Obj_Distribucion_DAL);
 
             txt_IdDistribucion.Text = string.Empty;
             txt_filtrar.Text = string.Empty;
             ddl_IdEmpleado.SelectedValue ="0";
-            ddl_IdEquipo.SelectedValue = "0";
+            ddl_IdEquipo.SelectedValue = "1";
             CargarDatosDistribucion();
         }
 

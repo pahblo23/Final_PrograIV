@@ -24,7 +24,7 @@ namespace BLL.MANTENIMIENTOS
             Obj_Empleados_DAL.dtParametros.Rows.Add("@email", "7", Obj_Empleados_DAL.sEmail);
            
 
-            Obj_Empleados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_USUARIO"],
+            Obj_Empleados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_EMPLEADO"],
                 "NORMAL", Obj_Empleados_DAL.dtParametros);
         }
 
@@ -36,7 +36,7 @@ namespace BLL.MANTENIMIENTOS
 
             Obj_Empleados_DAL.dtParametros.Rows.Add("@id_usuario", "1", Obj_Empleados_DAL.iID_Empelado);
 
-            Obj_Empleados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["BORRAR_USUARIO"],
+            Obj_Empleados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["BORRAR_EMPLEADO"],
                 "NORMAL", Obj_Empleados_DAL.dtParametros);
         }
 
@@ -47,7 +47,7 @@ namespace BLL.MANTENIMIENTOS
             if (Obj_Empleados_DAL.iID_Empelado == 0)
             {
                 Obj_Empleados_DAL.dtParametros = null;
-                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("usuario", ConfigurationManager.AppSettings["LISTAR_USUARIO"], null);
+                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("empleados", ConfigurationManager.AppSettings["LISTAR_EMPLEADO"], null);
             }
             else
             {
@@ -55,7 +55,7 @@ namespace BLL.MANTENIMIENTOS
 
                 Obj_Empleados_DAL.dtParametros.Rows.Add("@filtro", "1", Obj_Empleados_DAL.iID_Empelado);
 
-                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("usuario", ConfigurationManager.AppSettings["FILTRAR_USUARIO"],
+                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("empleados", ConfigurationManager.AppSettings["FILTRAR_EMPLEADO"],
                     Obj_Empleados_DAL.dtParametros);
             }
         }
@@ -72,7 +72,7 @@ namespace BLL.MANTENIMIENTOS
             Obj_Empleados_DAL.dtParametros.Rows.Add("@email", "7", Obj_Empleados_DAL.sEmail);
 
 
-            Obj_Empleados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_USUARIO"],
+            Obj_Empleados_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_EMPLEADO"],
                 "NORMAL", Obj_Empleados_DAL.dtParametros);
         }
     }

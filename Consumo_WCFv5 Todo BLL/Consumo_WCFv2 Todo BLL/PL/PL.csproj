@@ -162,7 +162,9 @@
     <Content Include="Ratones.aspx" />
     <Content Include="Recursos\Estilos\Estilos_Contacto.css" />
     <Content Include="Recursos\Estilos\Estilos_Inicio.css" />
+    <Content Include="Recursos\Estilos\Estilos_Botones.css" />
     <Content Include="Recursos\Estilos\Estilos_Nosotros.css" />
+    <Content Include="Recursos\Estilos\Estilos_TXT.css" />
     <Content Include="Recursos\Imagenes\eliminar.png" />
     <Content Include="Recursos\Imagenes\Google.png" />
     <Content Include="Recursos\Imagenes\guardar.png" />

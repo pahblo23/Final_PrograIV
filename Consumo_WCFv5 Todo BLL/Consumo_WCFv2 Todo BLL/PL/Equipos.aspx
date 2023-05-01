@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Equipos.aspx.cs" Inherits="PL.Equipos" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
             <asp:Label ID="lbl_Equipo" runat="server" Text="Id Equipo: "></asp:Label>

@@ -15,11 +15,16 @@ namespace PL
 
         cls_Distribucion_DAL Obj_Distribucion_DAL = new cls_Distribucion_DAL();
         cls_Distribucion_BLL obj_Distribucion_BLL = new cls_Distribucion_BLL();
+        cls_Empleados_BLL obj_Empleados_BLL = new cls_Empleados_BLL();
+        cls_Empleados_DAL obj_Empleados_DAL = new cls_Empleados_DAL();
+        cls_Equipos_BLL Obj_Equipos_BLL = new cls_Equipos_BLL();
+        cls_Equipos_DAL Obj_Equipos_DAL = new cls_Equipos_DAL();
 
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarDatosDistribucion();
+            CargarCombos();
         }
 
         private void CargarDatosDistribucion()
@@ -41,25 +46,32 @@ namespace PL
 
         private void CargarCombos()
         {
-            Obj_Distribucion_DAL.iID_Dsitribucion = 0;
+            //ddl empleados
+            obj_Empleados_DAL.iID_Empelado = 0;
 
-            obj_Distribucion_BLL.List_Filt_Distribucion(ref Obj_Distribucion_DAL);
-            Obj_Distribucion_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EMPLEADO ---");
+            obj_Empleados_BLL.List_Filt_Empleado(ref obj_Empleados_DAL);
+
+            obj_Empleados_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EMPLEADO ---");
 
             ddl_IdEmpleado.DataSource = null;
-            ddl_IdEmpleado.DataTextField = "NOMBRE EMPLEADO";
-            ddl_IdEmpleado.DataValueField = "ID EMPLEADO";
-            ddl_IdEmpleado.DataSource = Obj_Distribucion_DAL.dtDatos;
+            ddl_IdEmpleado.DataTextField = "Nombre Usuario";
+            ddl_IdEmpleado.DataValueField = "Identificacion Usuario";
+            ddl_IdEmpleado.DataSource = obj_Empleados_DAL.dtDatos;
             ddl_IdEmpleado.DataBind();
 
             ddl_IdEmpleado.SelectedValue = "0";
 
-            Obj_Distribucion_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA EQUIPO ---");
+            //ddl equipos
+            Obj_Equipos_DAL.iId_Equipo = 0;
+
+            Obj_Equipos_BLL.List_Filt_Equipo(ref Obj_Equipos_DAL);
+
+            Obj_Equipos_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EQUIPO ---");
 
             ddl_IdEquipo.DataSource = null;
-            ddl_IdEquipo.DataTextField = "ID EQUIPO";
-            ddl_IdEquipo.DataValueField = "ID EQUIPO";
-            ddl_IdEquipo.DataSource = Obj_Distribucion_DAL.dtDatos;
+            ddl_IdEquipo.DataTextField = "Identificacion equipo";
+            ddl_IdEquipo.DataValueField = "Identificacion equipo";
+            ddl_IdEquipo.DataSource = Obj_Equipos_DAL.dtDatos;
             ddl_IdEquipo.DataBind();
 
             ddl_IdEquipo.SelectedValue = "0";

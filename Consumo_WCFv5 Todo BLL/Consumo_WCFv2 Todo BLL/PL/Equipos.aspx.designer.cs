@@ -69,13 +69,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_Estado;
 
         /// <summary>
-        /// txt_Estado control.
+        /// ddlEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Estado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
 
         /// <summary>
         /// lbl_TipoTorre control.
@@ -87,13 +87,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_TipoTorre;
 
         /// <summary>
-        /// txt_TipoTorre control.
+        /// ddltipotorre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TipoTorre;
+        protected global::System.Web.UI.WebControls.DropDownList ddltipotorre;
 
         /// <summary>
         /// lbl_TipoTeclado control.
@@ -105,13 +105,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_TipoTeclado;
 
         /// <summary>
-        /// txt_TipoTeclado control.
+        /// ddltipoteclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TipoTeclado;
+        protected global::System.Web.UI.WebControls.DropDownList ddltipoteclado;
 
         /// <summary>
         /// lbl_TipoRaton control.
@@ -123,13 +123,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_TipoRaton;
 
         /// <summary>
-        /// txt_TipoRaton control.
+        /// ddlTipoRaton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TipoRaton;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoRaton;
 
         /// <summary>
         /// lbl_TipoOtro control.
@@ -141,13 +141,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_TipoOtro;
 
         /// <summary>
-        /// txt_TipoOtro control.
+        /// ddlTipoOtro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TipoOtro;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoOtro;
 
         /// <summary>
         /// lbl_TipoDisco control.
@@ -159,13 +159,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_TipoDisco;
 
         /// <summary>
-        /// txt_TipoDisco control.
+        /// ddltipodisco control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TipoDisco;
+        protected global::System.Web.UI.WebControls.DropDownList ddltipodisco;
 
         /// <summary>
         /// lbl_MarcaMemoria control.
@@ -177,13 +177,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_MarcaMemoria;
 
         /// <summary>
-        /// txt_MarcaMemoria control.
+        /// ddlmarcamemoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_MarcaMemoria;
+        protected global::System.Web.UI.WebControls.DropDownList ddlmarcamemoria;
 
         /// <summary>
         /// lbl_MarcaMonitor control.
@@ -195,13 +195,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.Label lbl_MarcaMonitor;
 
         /// <summary>
-        /// txt_MarcaMonitor control.
+        /// ddlmarcamonitor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_MarcaMonitor;
+        protected global::System.Web.UI.WebControls.DropDownList ddlmarcamonitor;
 
         /// <summary>
         /// btn_Guardar control.

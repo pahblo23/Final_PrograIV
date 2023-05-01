@@ -108,5 +108,7 @@ namespace PL
             ddl_IdEquipo.SelectedValue = string.Empty;
             CargarDatosDistribucion();
         }
+
+       
     }
 }

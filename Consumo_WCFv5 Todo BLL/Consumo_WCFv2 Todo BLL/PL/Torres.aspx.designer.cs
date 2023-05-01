@@ -11,7 +11,7 @@ namespace PL
 {
 
 
-    public partial class Teclados
+    public partial class Torres
     {
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_IdTeclado;
+        protected global::System.Web.UI.WebControls.Label lbl_IdTorres;
 
         /// <summary>
         /// txt_IdTeclado control.
@@ -66,7 +66,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdTeclado;
+        protected global::System.Web.UI.WebControls.TextBox txt_IdTorres;
 
         /// <summary>
         /// lbl_TipoTeclado control.
@@ -75,7 +75,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_TipoTeclado;
+        protected global::System.Web.UI.WebControls.Label lbl_TipoTorres;
 
         /// <summary>
         /// txt_TipoTeclado control.
@@ -84,7 +84,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TipoTeclado;
+        protected global::System.Web.UI.WebControls.TextBox txt_TipoTorres;
 
         /// <summary>
         /// lbl_MarcaTeclado control.
@@ -93,7 +93,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_MarcaTeclado;
+        protected global::System.Web.UI.WebControls.Label lbl_MarcaTorres;
 
         /// <summary>
         /// txt_MarcaTeclado control.
@@ -102,7 +102,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_MarcaTeclado;
+        protected global::System.Web.UI.WebControls.TextBox txt_MarcaTorres;
 
         /// <summary>
         /// lbl_ModeloTeclado control.
@@ -111,7 +111,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ModeloTeclado;
+        protected global::System.Web.UI.WebControls.Label lbl_ModeloTorres;
 
         /// <summary>
         /// txt_ModeloTeclado control.
@@ -120,7 +120,7 @@ namespace PL
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ModeloTeclado;
+        protected global::System.Web.UI.WebControls.TextBox txt_ModeloTorres;
 
         /// <summary>
         /// btn_Guardar control.

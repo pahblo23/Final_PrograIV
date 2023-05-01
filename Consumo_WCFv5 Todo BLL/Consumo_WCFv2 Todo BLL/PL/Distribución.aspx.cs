@@ -54,8 +54,8 @@ namespace PL
             obj_Empleados_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EMPLEADO ---");
 
             ddl_IdEmpleado.DataSource = null;
-            ddl_IdEmpleado.DataTextField = "Nombre Usuario";
-            ddl_IdEmpleado.DataValueField = "Identificacion Usuario";
+            ddl_IdEmpleado.DataTextField = "Nombre Empleado";
+            ddl_IdEmpleado.DataValueField = "Identificacion Empleado";
             ddl_IdEmpleado.DataSource = obj_Empleados_DAL.dtDatos;
             ddl_IdEmpleado.DataBind();
 

@@ -47,7 +47,7 @@ namespace BLL.MANTENIMIENTOS
             if (Obj_Empleados_DAL.iID_Empelado == 0)
             {
                 Obj_Empleados_DAL.dtParametros = null;
-                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("empleados", ConfigurationManager.AppSettings["LISTAR_EMPLEADO"], null);
+                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("empleado", ConfigurationManager.AppSettings["LISTAR_EMPLEADO"], null);
             }
             else
             {
@@ -55,7 +55,7 @@ namespace BLL.MANTENIMIENTOS
 
                 Obj_Empleados_DAL.dtParametros.Rows.Add("@filtro", "1", Obj_Empleados_DAL.iID_Empelado);
 
-                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("empleados", ConfigurationManager.AppSettings["FILTRAR_EMPLEADO"],
+                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("empleado", ConfigurationManager.AppSettings["FILTRAR_EMPLEADO"],
                     Obj_Empleados_DAL.dtParametros);
             }
         }

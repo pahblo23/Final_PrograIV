@@ -1,14 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Monitores.aspx.cs" Inherits="PL.Monitores" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <link href="Recursos/Estilos/Estilos_TXT.css" rel="stylesheet" />
     <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
+
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
+        &nbsp;&nbsp;<img src="Recursos/Imagenes/Monitor.png" style=" width: 200px;"/>&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lbl_Monitor" runat="server" Text="Id Monitor: "></asp:Label>
         &nbsp;
-            <asp:TextBox ID="txt_filtrar" runat="server"></asp:TextBox>
+            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server"></asp:TextBox>
         &nbsp;
              &nbsp;
              &nbsp;
@@ -22,33 +26,36 @@
         <br />
     </div>
     <div id="div_Editar" style="display: none">
-        <p>Edición de Datos de Monitor.</p>
+        <p class="lead">Edición de Datos de Monitor.</p>
         <div>
-            <asp:Label ID="lbl_IdMonitor" runat="server" Text="Id: "></asp:Label>
-            &nbsp;
-                    &nbsp;
-                    <asp:TextBox ID="txt_IdMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
-            &nbsp;
-                    &nbsp;
+
+            <div class="TextoPrimero" align="center">
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="lbl_IdMonitor" runat="server" Text="Id: "></asp:Label>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                </div>
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_TipoMonitor" runat="server" Text="Tipo: "></asp:Label>
-            &nbsp;
-                    &nbsp;
-                    <asp:TextBox ID="txt_TipoMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_TipoMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                </div>
+            </div>
+
             <br />
-            <br />
-            <asp:Label ID="lbl_MarcaMonitor" runat="server" Text="Marca: "></asp:Label>
-            &nbsp;
-                    &nbsp;
-                    <asp:TextBox ID="txt_MarcaMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
-            &nbsp;
-                    &nbsp;
+            <div class="TextoPrimero" align="center">
+                <div>
+                    <asp:Label ID="lbl_MarcaMonitor" runat="server" Text="Marca: "></asp:Label>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_MarcaMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                </div>
+                <div>
                     <asp:Label ID="lbl_ModeloMonitor" runat="server" Text="Modelo: "></asp:Label>
-            &nbsp;
-                    &nbsp;
-                    <asp:TextBox ID="txt_ModeloMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_ModeloMonitor" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                </div>
+            </div>
             <br />
             <br />
-            <div style="text-align: center">
+            <div style="text-align: right; margin-right: 220px;">
                 <asp:ImageButton ID="btn_Guardar" src="Recursos/Imagenes/modificar.png" Height="30px" Width="30px" runat="server" Text="Actualizar" OnClick="btn_Guardar_Click" />
                 &nbsp;
                         &nbsp;

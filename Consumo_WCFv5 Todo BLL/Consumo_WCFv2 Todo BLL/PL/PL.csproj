@@ -129,6 +129,8 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="frm_Contactanos.aspx" />
+    <Content Include="frm_Teclados.aspx" />
+    <Content Include="frm_Torres.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -165,17 +167,25 @@
     <Content Include="Recursos\Estilos\Estilos_Botones.css" />
     <Content Include="Recursos\Estilos\Estilos_Nosotros.css" />
     <Content Include="Recursos\Estilos\Estilos_TXT.css" />
+    <Content Include="Recursos\Estilos\Estilo_Global.css" />
+    <Content Include="Recursos\Imagenes\Case.png" />
+    <Content Include="Recursos\Imagenes\Discos.png" />
     <Content Include="Recursos\Imagenes\eliminar.png" />
+    <Content Include="Recursos\Imagenes\Equipos.png" />
     <Content Include="Recursos\Imagenes\Google.png" />
     <Content Include="Recursos\Imagenes\guardar.png" />
     <Content Include="Recursos\Imagenes\Logo.png" />
     <Content Include="Recursos\Imagenes\lupa.png" />
+    <Content Include="Recursos\Imagenes\Memorias.png" />
     <Content Include="Recursos\Imagenes\modificar.png" />
+    <Content Include="Recursos\Imagenes\Monitor.png" />
     <Content Include="Recursos\Imagenes\Mouse.png" />
+    <Content Include="Recursos\Imagenes\Mouse2.png" />
     <Content Include="Recursos\Imagenes\Prueba1.png" />
     <Content Include="Recursos\Imagenes\Prueba2.png" />
     <Content Include="Recursos\Imagenes\Prueba3.png" />
     <Content Include="Recursos\Imagenes\Prueba4.png" />
+    <Content Include="Recursos\Imagenes\Teclado.png" />
     <Content Include="Recursos\Imagenes\waze.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -283,6 +293,20 @@
     </Compile>
     <Compile Include="frm_Contactanos.aspx.designer.cs">
       <DependentUpon>frm_Contactanos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Teclados.aspx.cs">
+      <DependentUpon>frm_Teclados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_Teclados.aspx.designer.cs">
+      <DependentUpon>frm_Teclados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Torres.aspx.cs">
+      <DependentUpon>frm_Torres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_Torres.aspx.designer.cs">
+      <DependentUpon>frm_Torres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

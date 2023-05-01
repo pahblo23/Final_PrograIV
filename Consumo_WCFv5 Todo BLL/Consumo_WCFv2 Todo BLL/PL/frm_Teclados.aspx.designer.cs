@@ -11,151 +11,142 @@ namespace PL
 {
 
 
-    public partial class Empleados
+    public partial class frm_Teclados
     {
 
         /// <summary>
-        /// form1 control.
+        /// lblProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblProducto;
 
         /// <summary>
-        /// lblfiltrar control.
+        /// txtaFiltProd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfiltrar;
+        protected global::System.Web.UI.WebControls.TextBox txtaFiltProd;
 
         /// <summary>
-        /// Txtfiltrar control.
+        /// btnFiltrar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtfiltrar;
+        protected global::System.Web.UI.WebControls.ImageButton btnFiltrar;
 
         /// <summary>
-        /// lblguardar control.
+        /// lbl_IdTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblguardar;
+        protected global::System.Web.UI.WebControls.Label lbl_IdTeclado;
 
         /// <summary>
-        /// lblmodificar control.
+        /// txt_IdTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmodificar;
+        protected global::System.Web.UI.WebControls.TextBox txt_IdTeclado;
 
         /// <summary>
-        /// lbleliminar control.
+        /// lbl_TipoTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbleliminar;
+        protected global::System.Web.UI.WebControls.Label lbl_TipoTeclado;
 
         /// <summary>
-        /// lblusuario control.
+        /// txt_TipoTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblusuario;
+        protected global::System.Web.UI.WebControls.TextBox txt_TipoTeclado;
 
         /// <summary>
-        /// txtUsuario control.
+        /// lbl_MarcaTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.Label lbl_MarcaTeclado;
 
         /// <summary>
-        /// lblNombre control.
+        /// txt_MarcaTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
+        protected global::System.Web.UI.WebControls.TextBox txt_MarcaTeclado;
 
         /// <summary>
-        /// txtNombre control.
+        /// lbl_ModeloTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.Label lbl_ModeloTeclado;
 
         /// <summary>
-        /// lblRol control.
+        /// txt_ModeloTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRol;
+        protected global::System.Web.UI.WebControls.TextBox txt_ModeloTeclado;
 
         /// <summary>
-        /// txtRol control.
+        /// btn_Guardar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRol;
+        protected global::System.Web.UI.WebControls.ImageButton btn_Guardar;
 
         /// <summary>
-        /// lblTelefono control.
+        /// txt_Eliminar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTelefono;
+        protected global::System.Web.UI.WebControls.ImageButton txt_Eliminar;
 
         /// <summary>
-        /// Txttelefono control.
+        /// btnInsertar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txttelefono;
+        protected global::System.Web.UI.WebControls.ImageButton btnInsertar;
 
         /// <summary>
-        /// lblEmail control.
+        /// dgv_Teclados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
-
-        /// <summary>
-        /// txtEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.GridView dgv_Teclados;
     }
 }

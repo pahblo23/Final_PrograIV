@@ -173,9 +173,7 @@ GO
 CREATE TABLE [dbo].[torres](
 	[id_Torre] [int] NOT NULL,
 	[marca] [nvarchar](30) NULL,
-	[modelo] [nvarchar](30) NULL,
-	[id_Disco] [int] NULL,
-	[id_Memoria] [int] NULL,
+	[modelo] [nvarchar](30) NULL
  CONSTRAINT [PK_id_Torre_equipos] PRIMARY KEY NONCLUSTERED 
 (
 	[id_Torre] ASC
@@ -279,27 +277,6 @@ REFERENCES [dbo].[roles] ([id_Rol])
 GO
 ALTER TABLE [dbo].[empleado] CHECK CONSTRAINT [FK_roles_rol_id]
 GO
-
-
-ALTER TABLE [dbo].[torres]  WITH CHECK ADD  CONSTRAINT [FK_Discs_id_Disco] FOREIGN KEY([id_Disco])
-REFERENCES [dbo].[discos]([id_Disco])
-GO
-ALTER TABLE [dbo].[torres] CHECK CONSTRAINT [FK_Discs_id_Disco]
-GO
-
-ALTER TABLE [dbo].[torres]  WITH CHECK ADD  CONSTRAINT [FK_mem_id_Memoria] FOREIGN KEY([id_Memoria])
-REFERENCES [dbo].[memorias]([id_Memoria])
-GO
-ALTER TABLE [dbo].[torres] CHECK CONSTRAINT [FK_mem_id_Memoria]
-GO
-
-
-
-
-
-
-
-
 
 
 
@@ -488,16 +465,12 @@ GO
 create procedure [dbo].[SP_Actualizar_Torre]
 @id_Torre int,
 @marca nvarchar (30),
-@modelo nvarchar (30),
-@id_Disco int,
-@id_Memoria int
+@modelo nvarchar (30)
 as
 UPDATE [dbo].[torres]
    SET [id_Torre] = @id_Torre
       ,[marca] = @marca
       ,[modelo] = @modelo
-      ,[id_Disco] = @id_Disco
-      ,[id_Memoria] = @id_Memoria 
  WHERE [id_Torre] = @id_Torre
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Actualizar_Empleado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
@@ -767,9 +740,9 @@ create procedure [dbo].[SP_Filtrar_Estado]
 @filtro int
 as
 begin
-SELECT [id_Estado] as [Identificacion Estado]
-      ,[tipo_Estado] as [Tipo Estado]
-      ,[id_Equipo] as [Identificacion Equipo]
+SELECT [id_Estado] as [ID Estado]
+      ,[tipo_Estado] as [Tipo]
+      ,[id_Equipo] as [Identificacion]
   FROM [dbo].[estados]
 where ltrim(RTRIM([id_Estado])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
@@ -783,8 +756,8 @@ create procedure [dbo].[SP_Filtrar_Memoria]
 @filtro int
 as
 begin
-SELECT [id_Memoria]
-      ,[tipo_Memoria]
+SELECT [id_Memoria] as [ID]
+      ,[tipo_Memoria] as [Tipo de Memoria]
   FROM [dbo].[memorias]
 where ltrim(RTRIM([id_Memoria])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
@@ -798,10 +771,10 @@ create procedure [dbo].[SP_Filtrar_Monitor]
 @filtro int
 as
 begin
-SELECT [id_Monitor]
-      ,[tipo_Monitor]
-      ,[marca_Monitor]
-      ,[modelo_Monitor]
+SELECT [id_Monitor] as [ID]
+      ,[tipo_Monitor] [Tipo de Monitor]
+      ,[marca_Monitor] as [Marca]
+      ,[modelo_Monitor] as [Modelo]
   FROM [dbo].[monitores]
 where ltrim(RTRIM([id_Monitor])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
@@ -815,10 +788,10 @@ create procedure [dbo].[SP_Filtrar_Otros]
 @filtro int
 as
 begin
-SELECT [id_Otro] as [Identificacion Otro]
-      ,[tipo_Otro] as [Tipo Otro]
-      ,[marca_Otro] as [Marca Otro]
-      ,[modelo_Otro] as [Modelo Otro]
+SELECT [id_Otro] as [ID]
+      ,[tipo_Otro] as [Tipo ]
+      ,[marca_Otro] as [Marca]
+      ,[modelo_Otro] as [Modelo]
   FROM [dbo].[otros] 
 where ltrim(RTRIM([id_Otro])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
@@ -834,10 +807,10 @@ create procedure [dbo].[SP_Filtrar_Ratones]
 )
 as
 begin
-SELECT [id_Raton] as [Identificacion Raton]
-      ,[tipo_Raton] as [Tipo Raton]
-      ,[marca_Raton] as [Marca Raton]
-      ,[modelo_Raton] as [Modelo Raton]
+SELECT [id_Raton] as [ID]
+      ,[tipo_Raton] as [Tipo]
+      ,[marca_Raton] as [Marca]
+      ,[modelo_Raton] as [Modelo]
   FROM [dbo].[ratones]
   where ltrim(RTRIM([id_Raton])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
@@ -853,14 +826,14 @@ create procedure [dbo].[SP_Filtrar_Rol]
 )
 as
 begin
-SELECT [id_Rol] as [Identificacion Rol]
+SELECT [id_Rol] as [ID]
       ,[rol] [Rol]
   FROM [dbo].[roles]
   where ltrim(RTRIM([id_Rol])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Teclados]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Teclados]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -871,15 +844,15 @@ create procedure [dbo].[SP_Filtrar_Teclados]
 )
 as
 begin
-SELECT [id_Teclado] as [Identificacion Teclado]
-      ,[tipo_Teclado] as [Tipo Teclado]
-      ,[marca_Teclado] as [Marca Teclado]
-      ,[modelo_Teclado] as [Modelo Teclado]
+SELECT [id_Teclado] as [ID]
+      ,[tipo_Teclado] as [Tipo]
+      ,[marca_Teclado] as [Marca]
+      ,[modelo_Teclado] as [Modelo]
   FROM [dbo].[teclados]
   where ltrim(RTRIM([id_Teclado])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Torres]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Torres]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -890,18 +863,16 @@ CREATE procedure [dbo].[SP_Filtrar_Torres]
 )
 as
 begin
-SELECT dbo.[torres].id_Torre as [Identificacion Torre]
+SELECT dbo.[torres].id_Torre as [ID]
       ,[marca] as [Marca]
       ,[modelo] as [Modelo] 
-      ,[tipo_Disco] as [Tipo Disco]
-      ,[tipo_Memoria] as [Tipo Memoria]
+ 
   FROM [dbo].[torres]
-   LEFT JOIN dbo.discos on dbo.torres.id_Disco = dbo.discos.id_Disco
-   LEFT JOIN dbo.memorias on dbo.torres.id_Memoria = dbo.memorias.id_Memoria
+ 
     where ltrim(RTRIM(dbo.[torres].id_Torre)) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Empleados]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Filtrar_Empleados]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -921,7 +892,7 @@ SELECT [id_empleado] as [Identificacion Empleado]
     where ltrim(RTRIM([id_empleado])) like '%' + ltrim(RTRIM(@filtro)) + '%'
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Inserta_Rol]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Inserta_Rol]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -937,7 +908,7 @@ INSERT INTO [dbo].[roles]
            (@id_Rol,@rol)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_distribucion]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -960,7 +931,7 @@ INSERT INTO [dbo].[distribucion]
            @id_empleado)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Disco]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Disco]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -979,7 +950,7 @@ INSERT INTO [dbo].[discos]
            (@id_Disco, @tipo_Disco)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Equipo]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Equipo]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1011,7 +982,7 @@ INSERT INTO [dbo].[equipos]
 		   ,@memoria_Id,@monitor_Id)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Estado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Estado]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1031,7 +1002,7 @@ INSERT INTO [dbo].[estados]
 end
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Memoria]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Memoria]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1050,7 +1021,7 @@ INSERT INTO [dbo].[memorias]
            (@id_Memoria,@tipo_Memoria)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Monitor]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Monitor]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1073,7 +1044,7 @@ INSERT INTO [dbo].[monitores]
            (@id_Monitor,@tipo_Monitor,@marca_Monitor,@modelo_Monitor)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Otros]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Otros]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1096,7 +1067,7 @@ INSERT INTO [dbo].[otros]
            (@id_Otro,@tipo_Otro,@marca_Otro,@modelo_Otro)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Raton]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Raton]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1118,7 +1089,7 @@ INSERT INTO [dbo].[ratones]
 end
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Teclado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Teclado]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1139,7 +1110,7 @@ INSERT INTO [dbo].[teclados]
            (@teclado,@tipo_Teclado, @marca_Teclado,@modelo_Teclado)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Torre]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Torre]   . ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1147,23 +1118,20 @@ GO
 create procedure [dbo].[SP_Insertar_Torre]
 @id_Torre int,
 @marca nvarchar (30),
-@modelo nvarchar (30),
-@id_Disco int,
-@id_Memoria int
+@modelo nvarchar (30)
 
 as
 begin
 INSERT INTO [dbo].[torres]
            ([id_Torre]
            ,[marca]
-           ,[modelo]
-           ,[id_Disco]
-           ,[id_Memoria])
+           ,[modelo])
+
      VALUES
-           (@id_Torre,@marca,@modelo,@id_Disco,@id_Memoria)
+           (@id_Torre,@marca,@modelo)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Insertar_Empleado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Insertar_Empleado]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1187,7 +1155,7 @@ INSERT INTO [dbo].[empleado]
            (@nombre,@telefono,@rol_id,@email)
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Listar_distribucion]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Listar_distribucion]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1216,7 +1184,7 @@ SELECT [id_Distribucion] as [ID Distribucion]
   left join monitores on dbo.equipos.Monitor_Id = dbo.monitores.id_Monitor
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Listar_Disco]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Listar_Disco]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1229,7 +1197,7 @@ SELECT [id_Disco] as [Identificacion Disco]
   FROM [dbo].[discos]
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Listar_Equipos]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Listar_Equipos]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1256,7 +1224,7 @@ SELECT dbo.[equipos].id_Equipo as [Identificacion Equipo]
   LEFT JOIN dbo.monitores on dbo.equipos.monitor_Id = dbo.monitores.id_Monitor
   LEFT JOIN dbo.otros on dbo.equipos.otro_Id = dbo.otros.id_Otro
 end 
-/****** Object:  StoredProcedure [dbo].[SP_Listar_Estado]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Listar_Estado]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1270,7 +1238,7 @@ SELECT [id_Estado] as [Identificacion Estado]
   FROM [dbo].[estados]
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Listar_Monitor]    Script Date: 29/04/2023 08:40:29 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_Listar_Monitor]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1278,11 +1246,11 @@ GO
 create procedure [dbo].[SP_Listar_Monitor]
 as
 begin
-SELECT [id_Monitor]
-      ,[tipo_Monitor]
-      ,[marca_Monitor]
-      ,[modelo_Monitor]
-  FROM [dbo].[monitores]
+SELECT [id_Monitor] as [ID]
+      ,[tipo_Monitor] as [Tipo]
+      ,[marca_Monitor] as [Marca]
+      ,[modelo_Monitor] as [Modelo] 
+  FROM [dbo].[monitores] 
 end
 GO
 /****** Object:  StoredProcedure [dbo].[SP_Listar_Otros]    Script Date: 29/04/2023 08:40:29 a. m. ******/
@@ -1324,7 +1292,7 @@ create procedure [dbo].[SP_Listar_Rol]
 as
 begin
 SELECT [id_Rol] as [Identificacion Rol]
-      ,[rol] [Rol]
+      ,[rol] as [Rol]
   FROM [dbo].[roles]
 end
 GO
@@ -1355,11 +1323,9 @@ begin
 SELECT dbo.[torres].id_Torre as [Identificacion Torre]
       ,[marca] as [Marca]
       ,[modelo] as [Modelo] 
-      ,[tipo_Disco] as [Tipo Disco]
-      ,[tipo_Memoria] as [Tipo Memoria]
+   
   FROM [dbo].[torres]
-   LEFT JOIN dbo.discos on dbo.torres.id_Disco = dbo.discos.id_Disco
-   LEFT JOIN dbo.memorias on dbo.torres.id_Memoria = dbo.memorias.id_Memoria
+ 
 end
 /****** Object:  StoredProcedure [dbo].[SP_Listar_Empleados]    Script Date: 29/04/2023 08:40:29 a. m. ******/
 SET ANSI_NULLS ON
@@ -1462,11 +1428,11 @@ VALUES
 GO
 
 INSERT INTO torres
-	(id_Torre , marca , modelo , id_Disco , id_Memoria)
+	(id_Torre , marca , modelo )
 VALUES 
-	(1 , 'DELL' , 'Vostro 3710' , 3 , 3) ,
-	(2 , 'HP', 'ProDesk 400 G7' , 1 , 2) , 
-	(3 , 'LENOVO' , 'ThinkCentre M75s' , 2 , 2)
+	(1 , 'DELL' , 'Vostro 3710' ) ,
+	(2 , 'HP', 'ProDesk 400 G7' ) , 
+	(3 , 'LENOVO' , 'ThinkCentre M75s' )
 GO
 INSERT INTO equipos 
 	(id_Equipo , estado_Id , torre_Id , teclado_Id , raton_Id ,otro_Id , disco_Id ,memoria_Id , monitor_Id)

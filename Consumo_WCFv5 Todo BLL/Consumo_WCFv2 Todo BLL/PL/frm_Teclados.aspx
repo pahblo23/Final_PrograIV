@@ -7,6 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
+        &nbsp;&nbsp;<img src="Recursos/Imagenes/Teclado.png" style=" width: 200px;"/>&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblProducto" runat="server" Text="Id Teclado: "></asp:Label>
         &nbsp;
             <asp:TextBox CssClass="CajasTextos" ID="txtaFiltProd" runat="server" Width="153px" Height="27px"></asp:TextBox>
@@ -18,15 +19,13 @@
         &nbsp;
              &nbsp;
            <input class="Botones" id="btn_editar" type="button" value="Editar" onclick="toggle()" />
-        <br />
-        <br />
-        <br />
+        
     </div>
     <div id="div_Editar" style="display: none">
-        <p>Edición de Datos de Teclados.</p>
+        <p class="lead">Edición de Datos de Teclados.</p>
 
 
-        <div class="TextoPrimero">
+        <div class="TextoPrimero" align="center">
             <div>
                 &nbsp; &nbsp; &nbsp; &nbsp;
                             <asp:Label ID="lbl_IdTeclado" runat="server" Text="Id: "></asp:Label>
@@ -43,8 +42,7 @@
 
 
         <br />
-        <br />
-        <div class="TextoPrimero">
+        <div class="TextoPrimero" align="center">
             <div>
                 &nbsp;
                             <asp:Label ID="lbl_MarcaTeclado" runat="server" Text="Marca:  "></asp:Label>

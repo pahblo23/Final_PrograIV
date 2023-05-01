@@ -7,8 +7,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
-
-
+        &nbsp;&nbsp;<img src="Recursos/Imagenes/Case.png"  style=" width: 200px;" />&nbsp;&nbsp;&nbsp;
+        
         <asp:Label ID="lblProducto" runat="server" Text="Id Torres: "></asp:Label>
         &nbsp;
          <asp:TextBox CssClass="CajasTextos" ID="txtaFiltProd" runat="server"></asp:TextBox>
@@ -20,14 +20,15 @@
         &nbsp;
              &nbsp;
            <input id="btn_editar" type="button" value="Editar" onclick="toggle()" />
-        <br />
-        <br />
-        <br />
+
+        
+
     </div>
+    <br />
     <div id="div_Editar" style="display: none">
         <p class="lead">Edición de Datos de Torres.</p>
         <div>
-            <div class="TextoPrimero">
+            <div class="TextoPrimero" align="center">
                 <div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_IdTorre" runat="server" Text="Id: "></asp:Label>
@@ -41,7 +42,7 @@
                 </div>
             </div>
             <br />
-            <div class="TextoPrimero">
+            <div class="TextoPrimero" align="center">
                
                 <div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -56,7 +57,7 @@
             </div>
 
             <br />
-            <div class="TextoPrimero">
+            <div class="TextoPrimero" align="center">
                 <asp:Label ID="lbl_IdMemoria" runat="server" Text="Id Memoria: "></asp:Label>
                  <asp:TextBox CssClass="CajasTextos" ID="txt_IdMemoria" runat="server" Height="31px" Width="375px"></asp:TextBox>
             </div>
@@ -76,6 +77,7 @@
         <br />
 
     </div>
+    
     <div>
         <asp:GridView ID="dgv_Productos" runat="server" Width="900px"></asp:GridView>
     </div>

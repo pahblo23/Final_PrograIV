@@ -50,7 +50,7 @@
                 <br />
             </div>
             <div id="div_Editar" style="display:none">
-                <p>Edición de Datos de Teclados.</p>
+                <p>Edicion de Datos de Teclados.</p>
                  <asp:Label ID="lbl_IdTeclado" runat="server" Text="Id: "></asp:Label> 
                     &nbsp;
                     &nbsp;

@@ -101,7 +101,7 @@ namespace PL
         {
             txt_IdDistribucion.Text = string.Empty;
             txt_filtrar.Text = string.Empty;
-            ddl_IdEmpleado.SelectedValue = string.Empty;
+            ddl_IdEmpleado.SelectedValue = "0";
             ddl_IdEquipo.SelectedValue = string.Empty;
             CargarDatosDistribucion();
         }

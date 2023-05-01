@@ -42,9 +42,9 @@ namespace PL
 
             Obj_Torres_BLL.List_Filt_Torre(ref Obj_Torres_DAL);
 
-            dgv_Torres.DataSource = null;
-            dgv_Torres.DataSource = Obj_Torres_DAL.dtDatos;
-            dgv_Torres.DataBind();
+            dgv_Productos.DataSource = null;
+            dgv_Productos.DataSource = Obj_Torres_DAL.dtDatos;
+            dgv_Productos.DataBind();
         }
 
         protected void btn_Guardar_Click(object sender, EventArgs e)

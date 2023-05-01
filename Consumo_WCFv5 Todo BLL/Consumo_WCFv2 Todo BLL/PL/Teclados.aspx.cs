@@ -24,19 +24,19 @@ namespace PL
 
         private void CargarDatosTeclados()
         {
-            //if (txtaFiltProd.Text == string.Empty)
-            //{
-            //    Obj_Teclados_DAL.iId_Teclado = 0;
-            //}
-            //else
-            //{
-            //    Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txtaFiltProd.Text.Trim());
-            //}
-            //Obj_Teclados_BLL.List_Filt_Teclado(ref Obj_Teclados_DAL);
+            if (txtaFiltProd.Text == string.Empty)
+            {
+                Obj_Teclados_DAL.iId_Teclado = 0;
+            }
+            else
+            {
+                Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txtaFiltProd.Text.Trim());
+            }
+            Obj_Teclados_BLL.List_Filt_Teclado(ref Obj_Teclados_DAL);
 
-            //dgv_Teclados.DataSource = null;
-            //dgv_Teclados.DataSource = Obj_Teclados_DAL.dtDatos;
-            //dgv_Teclados.DataBind();
+            dgv_Teclados.DataSource = null;
+            dgv_Teclados.DataSource = Obj_Teclados_DAL.dtDatos;
+            dgv_Teclados.DataBind();
         }
 
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)

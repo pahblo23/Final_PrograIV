@@ -168,12 +168,12 @@ namespace PL
         protected global::System.Web.UI.WebControls.ImageButton btnInsertar;
 
         /// <summary>
-        /// dgv_Torres control.
+        /// dgv_Productos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgv_Torres;
+        protected global::System.Web.UI.WebControls.GridView dgv_Productos;
     }
 }

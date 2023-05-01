@@ -13,8 +13,8 @@ namespace PL
     {
         #region VARIABLES GLOBALES 
 
-        cls_Torres_DAL Obj_Teclados_DAL = new cls_Torres_DAL();
-        cls_Torres_BLL Obj_Teclados_BLL = new cls_Torres_BLL();
+        cls_Torres_DAL Obj_Torres_DAL = new cls_Torres_DAL();
+        cls_Torres_BLL Obj_Torres_BLL = new cls_Torres_BLL();
 
         #endregion
         protected void Page_Load(object sender, EventArgs e)
@@ -26,17 +26,17 @@ namespace PL
         {
             if ( txtaFiltTorre.Text == string.Empty)
             {
-                Obj_Teclados_DAL.iId_Torre = 0;
+                Obj_Torres_DAL.iId_Torre = 0;
             }
             else
             {
-                Obj_Teclados_DAL.iId_Torre = Convert.ToInt32(txtaFiltProd.Text.Trim());
+                Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txtaFiltProd.Text.Trim());
             }
-            Obj_Teclados_BLL.List_Filt_Torre(ref Obj_Teclados_DAL);
+            Obj_Torres_BLL.List_Filt_Torre(ref Obj_Torres_DAL);
             
             dgv_Torres.DataSource = null;
-            dgv_Teclados.DataSource = Obj_Teclados_DAL.dtDatos;
-            dgv_Teclados.DataBind();
+            dgv_Torres.DataSource = Obj_Torres_DAL.dtDatos;
+            dgv_Torres.DataBind();
         }
 
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
@@ -46,12 +46,12 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
-            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
-            Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
-            Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
-            Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
+            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
+            Obj_Torres_DAL.sMarca_Torre = txt_MarcaTorres.Text.Trim();
+            Obj_Torres_DAL.sModelo_Torre = txt_ModeloTorres.Text.Trim();
 
-            Obj_Teclados_BLL.Actualizar_Teclado(ref Obj_Teclados_DAL);
+
+            Obj_Torres_BLL.Actualizar_Torre(ref Obj_Torre_DAL);
 
             txtaFiltProd.Text = string.Empty;
             txt_IdTeclado.Text = string.Empty;
@@ -63,22 +63,22 @@ namespace PL
 
         protected void txt_Eliminar_Click(object sender, EventArgs e)
         {
-            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
+            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
 
-            Obj_Teclados_BLL.Borrar_Teclado(ref Obj_Teclados_DAL);
+            Obj_Torres_BLL.Borrar_Torre(ref Obj_Torres_DAL);
 
-            txt_IdTeclado.Text = string.Empty;
-            CargarDatosTeclados();
+            txt_IdTorres.Text = string.Empty;
+            CargarDatosTorres();
         }
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
-            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
-            Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
-            Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
-            Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
+            Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
+            Obj_Torres_DAL. sTipo_Torre = txt_TipoTorres.Text.Trim();
+            Obj_Torres_DAL.sMarca_Torre = txt_MarcaTorres.Text.Trim();
+            Obj_Torres_DAL.sModelo_Torre = txt_ModeloTorres.Text.Trim();
           
-            Obj_Teclados_BLL.Insertar_Teclados(ref Obj_Teclados_DAL);
+            Obj_Torres_BLL.Insertar_Torre(ref Obj_Torres_DAL);
 
             txtaFiltProd.Text = string.Empty;
             txt_IdTeclado.Text = string.Empty;

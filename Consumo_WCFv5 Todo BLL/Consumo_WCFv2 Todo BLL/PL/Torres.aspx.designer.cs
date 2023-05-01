@@ -11,7 +11,7 @@ namespace PL
 {
 
 
-    public partial class Teclados
+    public partial class Torres
     {
 
         /// <summary>

@@ -24,13 +24,13 @@ namespace PL
 
         private void CargarDatosTorres()
         {
-            if ( txtaFiltTorre.Text == string.Empty)
+            if (txt_IdTorres.Text == string.Empty)
             {
                 Obj_Torres_DAL.iId_Torre = 0;
             }
             else
             {
-                Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txtaFiltProd.Text.Trim());
+                Obj_Torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorres.Text.Trim());
             }
             Obj_Torres_BLL.List_Filt_Torre(ref Obj_Torres_DAL);
             
@@ -53,11 +53,12 @@ namespace PL
 
             Obj_Torres_BLL.Actualizar_Torre(ref Obj_Torres_DAL);
 
-            txtaFiltProd.Text = string.Empty;
-            txt_IdTeclado.Text = string.Empty;
-            txt_MarcaTeclado.Text = string.Empty;
-            txt_ModeloTeclado.Text =  string.Empty;
-            txt_TipoTeclado.Text = string.Empty;
+            //txt
+            //txtaFiltProd.Text = string.Empty;
+            //txt_IdTeclado.Text = string.Empty;
+            //txt_MarcaTeclado.Text = string.Empty;
+            //txt_ModeloTeclado.Text =  string.Empty;
+            //txt_TipoTeclado.Text = string.Empty;
             CargarDatosTorres();
         }
 
@@ -80,11 +81,11 @@ namespace PL
           
             Obj_Torres_BLL.Insertar_Torre(ref Obj_Torres_DAL);
 
-            txtaFiltProd.Text = string.Empty;
-            txt_IdTeclado.Text = string.Empty;
-            txt_MarcaTeclado.Text = string.Empty;
-            txt_ModeloTeclado.Text = string.Empty;
-            txt_TipoTeclado.Text = string.Empty;
+            //txtaFiltProd.Text = string.Empty;
+            //txt_IdTeclado.Text = string.Empty;
+            //txt_MarcaTeclado.Text = string.Empty;
+            //txt_ModeloTeclado.Text = string.Empty;
+            //txt_TipoTeclado.Text = string.Empty;
             CargarDatosTorres();
         }
     }

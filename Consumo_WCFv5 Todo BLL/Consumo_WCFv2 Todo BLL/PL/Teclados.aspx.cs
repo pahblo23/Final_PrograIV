@@ -46,7 +46,7 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
-            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
+            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txtaFiltProd.Text.Trim());
             Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
             Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
             Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();

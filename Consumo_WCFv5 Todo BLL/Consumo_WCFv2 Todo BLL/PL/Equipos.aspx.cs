@@ -109,5 +109,6 @@ namespace PL
         dgv_Equipo.DataSource = Obj_Equipo_DAL.dtDatos;
         dgv_Equipo.DataBind();
     }
-}
+       
+    }
 }

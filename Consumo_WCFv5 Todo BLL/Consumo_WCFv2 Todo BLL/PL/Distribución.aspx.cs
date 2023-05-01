@@ -120,5 +120,7 @@ namespace PL
             ddl_IdEquipo.SelectedValue = "0";
             CargarDatosDistribucion();
         }
+
+       
     }
 }
